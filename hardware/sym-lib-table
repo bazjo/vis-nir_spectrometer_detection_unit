@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name photodiode_adc)(type Legacy)(uri ${KIPRJMOD}/photodiode_adc.lib)(options "")(descr ""))
+  (lib (name phtodiode_adc-rescue)(type Legacy)(uri ${KIPRJMOD}/phtodiode_adc-rescue.lib)(options "")(descr ""))
+)

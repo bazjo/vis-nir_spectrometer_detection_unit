@@ -1,0 +1,2567 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L photodiode_adc:AD7768-1 U3
+U 1 1 5EE5F14B
+P 3950 3500
+F 0 "U3" H 5300 1700 50  0000 C CNN
+F 1 "AD7768-1" H 5450 1600 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-28-1EP_4x5mm_P0.5mm_EP2.65x3.65mm_ThermalVias" H 5350 3300 50  0001 C CNN
+F 3 "" H 5350 3300 50  0001 C CNN
+	1    3950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:ADR452x U5
+U 1 1 5EE63273
+P 4600 6650
+F 0 "U5" H 4600 6775 50  0000 C CNN
+F 1 "ADR452x" H 4600 6684 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4600 6650 50  0001 C CNN
+F 3 "" H 4600 6650 50  0001 C CNN
+	1    4600 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:Si514 U6
+U 1 1 5EE6423C
+P 2300 6750
+F 0 "U6" H 2300 6875 50  0000 C CNN
+F 1 "Si514" H 2300 6784 50  0000 C CNN
+F 2 "Oscillator:Oscillator_SMD_IDT_JU6-6_7.0x5.0mm_P2.54mm" H 2300 6750 50  0001 C CNN
+F 3 "" H 2300 6750 50  0001 C CNN
+	1    2300 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:TPS63700 U1
+U 1 1 5EE662D6
+P 2400 850
+F 0 "U1" H 2000 975 50  0000 C CNN
+F 1 "TPS63700" H 2000 884 50  0000 C CNN
+F 2 "Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm_ThermalVias" H 2000 850 50  0001 C CNN
+F 3 "" H 2000 850 50  0001 C CNN
+	1    2400 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:Arduino_UNO_R3-MCU_Module A1
+U 1 1 5EE67C1E
+P 10100 4700
+F 0 "A1" H 10600 5750 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 10850 5650 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 10100 4700 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 10100 4700 50  0001 C CNN
+	1    10100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR055
+U 1 1 5EE6B2C0
+P 10100 5900
+F 0 "#PWR055" H 10100 5650 50  0001 C CNN
+F 1 "GNDD" H 10104 5745 50  0000 C CNN
+F 2 "" H 10100 5900 50  0001 C CNN
+F 3 "" H 10100 5900 50  0001 C CNN
+	1    10100 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 5800 10000 5850
+Wire Wire Line
+	10000 5850 10100 5850
+Wire Wire Line
+	10200 5850 10200 5800
+Wire Wire Line
+	10100 5800 10100 5850
+Connection ~ 10100 5850
+Wire Wire Line
+	10100 5850 10200 5850
+Wire Wire Line
+	10100 5900 10100 5850
+Wire Wire Line
+	10650 5500 10600 5500
+Wire Wire Line
+	10650 5400 10600 5400
+Wire Wire Line
+	9550 5100 9600 5100
+Wire Wire Line
+	9550 5200 9600 5200
+Wire Wire Line
+	9550 5300 9600 5300
+Wire Wire Line
+	9550 5400 9600 5400
+Text Label 10650 5400 0    50   ~ 0
+SDA
+Text Label 10650 5500 0    50   ~ 0
+SCL
+Text Label 9550 5100 2    50   ~ 0
+~CS~
+Text Label 9550 5200 2    50   ~ 0
+MOSI
+Text Label 9550 5300 2    50   ~ 0
+MISO
+Text Label 9550 5400 2    50   ~ 0
+SCK
+Text Label 5850 4650 0    50   ~ 0
+MOSI
+Text Label 5850 4550 0    50   ~ 0
+MISO
+Text Label 5850 4450 0    50   ~ 0
+SCK
+Text Label 5850 4350 0    50   ~ 0
+~CS~
+Wire Wire Line
+	5800 4350 5850 4350
+Wire Wire Line
+	5800 4450 5850 4450
+Wire Wire Line
+	5800 4550 5850 4550
+Wire Wire Line
+	5800 4650 5850 4650
+$Comp
+L photodiode_adc:GNDA-power #PWR052
+U 1 1 5EE6EDD2
+P 4850 5450
+F 0 "#PWR052" H 4850 5200 50  0001 C CNN
+F 1 "GNDA" H 4855 5277 50  0000 C CNN
+F 2 "" H 4850 5450 50  0001 C CNN
+F 3 "" H 4850 5450 50  0001 C CNN
+	1    4850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR053
+U 1 1 5EE728AF
+P 5050 5450
+F 0 "#PWR053" H 5050 5200 50  0001 C CNN
+F 1 "GNDD" H 5054 5295 50  0000 C CNN
+F 2 "" H 5050 5450 50  0001 C CNN
+F 3 "" H 5050 5450 50  0001 C CNN
+	1    5050 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR051
+U 1 1 5EE7309D
+P 4100 5450
+F 0 "#PWR051" H 4100 5200 50  0001 C CNN
+F 1 "GNDD" H 4104 5295 50  0000 C CNN
+F 2 "" H 4100 5450 50  0001 C CNN
+F 3 "" H 4100 5450 50  0001 C CNN
+	1    4100 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR050
+U 1 1 5EE733D7
+P 3850 5450
+F 0 "#PWR050" H 3850 5200 50  0001 C CNN
+F 1 "GNDA" H 3855 5277 50  0000 C CNN
+F 2 "" H 3850 5450 50  0001 C CNN
+F 3 "" H 3850 5450 50  0001 C CNN
+	1    3850 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 5450 4850 5400
+Wire Wire Line
+	4850 5400 4950 5400
+Wire Wire Line
+	4950 5400 4950 5350
+Connection ~ 4850 5400
+Wire Wire Line
+	4850 5400 4850 5350
+Wire Wire Line
+	5050 5450 5050 5350
+NoConn ~ 4200 4950
+$Comp
+L photodiode_adc:+3.3V-power #PWR032
+U 1 1 5EE75A72
+P 5050 3550
+F 0 "#PWR032" H 5050 3400 50  0001 C CNN
+F 1 "+3.3V" H 5065 3723 50  0000 C CNN
+F 2 "" H 5050 3550 50  0001 C CNN
+F 3 "" H 5050 3550 50  0001 C CNN
+	1    5050 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR031
+U 1 1 5EE795F1
+P 4850 3550
+F 0 "#PWR031" H 4850 3400 50  0001 C CNN
+F 1 "+5VA" H 4865 3723 50  0000 C CNN
+F 2 "" H 4850 3550 50  0001 C CNN
+F 3 "" H 4850 3550 50  0001 C CNN
+	1    4850 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3550 4850 3600
+Wire Wire Line
+	4850 3600 4950 3600
+Wire Wire Line
+	4950 3600 4950 3650
+Connection ~ 4850 3600
+Wire Wire Line
+	4850 3600 4850 3650
+Wire Wire Line
+	5050 3550 5050 3650
+$Comp
+L photodiode_adc:GNDA-power #PWR064
+U 1 1 5EE84276
+P 4250 7100
+F 0 "#PWR064" H 4250 6850 50  0001 C CNN
+F 1 "GNDA" H 4255 6927 50  0000 C CNN
+F 2 "" H 4250 7100 50  0001 C CNN
+F 3 "" H 4250 7100 50  0001 C CNN
+	1    4250 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR059
+U 1 1 5EE8484E
+P 4250 6700
+F 0 "#PWR059" H 4250 6550 50  0001 C CNN
+F 1 "+5VA" H 4265 6873 50  0000 C CNN
+F 2 "" H 4250 6700 50  0001 C CNN
+F 3 "" H 4250 6700 50  0001 C CNN
+	1    4250 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 6950 4900 6950
+Wire Wire Line
+	4300 7050 4250 7050
+Wire Wire Line
+	4250 7050 4250 7100
+NoConn ~ 4900 6750
+NoConn ~ 4900 6850
+NoConn ~ 4900 7050
+NoConn ~ 4300 6950
+Wire Wire Line
+	4300 6850 4250 6850
+Wire Wire Line
+	4250 6850 4250 6700
+NoConn ~ 4300 6750
+Text Label 4950 6950 0    50   ~ 0
+VREF
+$Comp
+L photodiode_adc:+3.3V-power #PWR057
+U 1 1 5EE89A89
+P 2700 6400
+F 0 "#PWR057" H 2700 6250 50  0001 C CNN
+F 1 "+3.3V" H 2715 6573 50  0000 C CNN
+F 2 "" H 2700 6400 50  0001 C CNN
+F 3 "" H 2700 6400 50  0001 C CNN
+	1    2700 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR062
+U 1 1 5EE8A7E9
+P 1900 7100
+F 0 "#PWR062" H 1900 6850 50  0001 C CNN
+F 1 "GNDD" H 1904 6945 50  0000 C CNN
+F 2 "" H 1900 7100 50  0001 C CNN
+F 3 "" H 1900 7100 50  0001 C CNN
+	1    1900 7100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2650 6950
+Wire Wire Line
+	2700 7050 2650 7050
+Text Label 1750 6850 2    50   ~ 0
+SDA
+Text Label 1750 6950 2    50   ~ 0
+SCL
+Text Label 3000 7050 0    50   ~ 0
+MCLK
+$Comp
+L photodiode_adc:R-Device R28
+U 1 1 5EE8EAB3
+P 1900 6650
+F 0 "R28" H 2000 6750 50  0000 L CNN
+F 1 "4k7" H 2100 6750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1830 6650 50  0001 C CNN
+F 3 "~" H 1900 6650 50  0001 C CNN
+	1    1900 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:R-Device R27
+U 1 1 5EE8F659
+P 1800 6650
+F 0 "R27" H 2000 6850 50  0000 L CNN
+F 1 "4k7" H 2100 6850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1730 6650 50  0001 C CNN
+F 3 "~" H 1800 6650 50  0001 C CNN
+	1    1800 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6850 1900 6850
+Wire Wire Line
+	1750 6950 1800 6950
+Wire Wire Line
+	1900 6800 1900 6850
+Connection ~ 1900 6850
+Wire Wire Line
+	1900 6850 1950 6850
+Wire Wire Line
+	1800 6800 1800 6950
+Connection ~ 1800 6950
+Wire Wire Line
+	1800 6950 1950 6950
+Wire Wire Line
+	1800 6500 1800 6450
+Wire Wire Line
+	1800 6450 1850 6450
+Wire Wire Line
+	1900 6450 1900 6500
+$Comp
+L photodiode_adc:+3.3V-power #PWR056
+U 1 1 5EE943B7
+P 1850 6400
+F 0 "#PWR056" H 1850 6250 50  0001 C CNN
+F 1 "+3.3V" H 1865 6573 50  0000 C CNN
+F 2 "" H 1850 6400 50  0001 C CNN
+F 3 "" H 1850 6400 50  0001 C CNN
+	1    1850 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6450 1850 6400
+Connection ~ 1850 6450
+Wire Wire Line
+	1850 6450 1900 6450
+Wire Wire Line
+	2700 6400 2700 6850
+Wire Wire Line
+	2700 6850 2650 6850
+Wire Wire Line
+	1900 7100 1900 7050
+Wire Wire Line
+	1900 7050 1950 7050
+$Comp
+L photodiode_adc:C-Device C21
+U 1 1 5EE998D8
+P 3850 3800
+F 0 "C21" H 3965 3846 50  0000 L CNN
+F 1 "100n" H 3965 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3888 3650 50  0001 C CNN
+F 3 "~" H 3850 3800 50  0001 C CNN
+	1    3850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3650 4200 3850
+Text Label 3800 3650 2    50   ~ 0
+VREF
+Wire Wire Line
+	3850 3950 4200 3950
+Connection ~ 3850 3950
+Wire Wire Line
+	3850 3950 3850 4150
+Wire Wire Line
+	3850 3650 4200 3650
+Wire Wire Line
+	3800 3650 3850 3650
+Connection ~ 3850 3650
+Wire Wire Line
+	4200 4650 4100 4650
+Wire Wire Line
+	3800 4750 4200 4750
+Text Label 3800 4750 2    50   ~ 0
+MCLK
+Wire Wire Line
+	4200 4550 4100 4550
+Wire Wire Line
+	4100 4550 4100 4650
+Connection ~ 4100 4650
+$Comp
+L photodiode_adc:+3.3V-power #PWR041
+U 1 1 5EEABEB3
+P 3800 4450
+F 0 "#PWR041" H 3800 4300 50  0001 C CNN
+F 1 "+3.3V" V 3815 4578 50  0000 L CNN
+F 2 "" H 3800 4450 50  0001 C CNN
+F 3 "" H 3800 4450 50  0001 C CNN
+	1    3800 4450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 4450 4200 4450
+$Comp
+L photodiode_adc:R-Device R4
+U 1 1 5EEAE884
+P 10100 1100
+F 0 "R4" V 9800 900 50  0000 C CNN
+F 1 "0R" V 9800 1050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 1100 50  0001 C CNN
+F 3 "~" H 10100 1100 50  0001 C CNN
+	1    10100 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R6
+U 1 1 5EEAF615
+P 10100 1200
+F 0 "R6" V 9800 1000 50  0000 C CNN
+F 1 "0R" V 9900 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 1200 50  0001 C CNN
+F 3 "~" H 10100 1200 50  0001 C CNN
+	1    10100 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R11
+U 1 1 5EEAFF97
+P 10100 1300
+F 0 "R11" V 9800 1100 50  0000 C CNN
+F 1 "0R" V 9700 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 1300 50  0001 C CNN
+F 3 "~" H 10100 1300 50  0001 C CNN
+	1    10100 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR06
+U 1 1 5EEB0B4F
+P 10300 1050
+F 0 "#PWR06" H 10300 900 50  0001 C CNN
+F 1 "+3.3V" H 10315 1223 50  0000 C CNN
+F 2 "" H 10300 1050 50  0001 C CNN
+F 3 "" H 10300 1050 50  0001 C CNN
+	1    10300 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR08
+U 1 1 5EEB11E3
+P 10300 1350
+F 0 "#PWR08" H 10300 1100 50  0001 C CNN
+F 1 "GNDD" H 10304 1195 50  0000 C CNN
+F 2 "" H 10300 1350 50  0001 C CNN
+F 3 "" H 10300 1350 50  0001 C CNN
+	1    10300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1100 9900 1200
+Wire Wire Line
+	9900 1300 9950 1300
+Wire Wire Line
+	9900 1100 9950 1100
+Wire Wire Line
+	9900 1200 9950 1200
+Connection ~ 9900 1200
+Wire Wire Line
+	9900 1200 9900 1300
+Wire Wire Line
+	10250 1100 10300 1100
+Wire Wire Line
+	10300 1100 10300 1050
+Wire Wire Line
+	10250 1300 10300 1300
+Wire Wire Line
+	10300 1300 10300 1350
+Wire Wire Line
+	10300 1200 10250 1200
+Text Label 10300 1200 0    50   ~ 0
+1_MCU
+Text Label 9850 1200 2    50   ~ 0
+1_ADC
+Wire Wire Line
+	9850 1200 9900 1200
+$Comp
+L photodiode_adc:R-Device R14
+U 1 1 5EEE032E
+P 10100 1850
+F 0 "R14" V 9800 1650 50  0000 C CNN
+F 1 "0R" V 9800 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 1850 50  0001 C CNN
+F 3 "~" H 10100 1850 50  0001 C CNN
+	1    10100 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R16
+U 1 1 5EEE0334
+P 10100 1950
+F 0 "R16" V 9800 1750 50  0000 C CNN
+F 1 "0R" V 9900 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 1950 50  0001 C CNN
+F 3 "~" H 10100 1950 50  0001 C CNN
+	1    10100 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R18
+U 1 1 5EEE033A
+P 10100 2050
+F 0 "R18" V 9800 1850 50  0000 C CNN
+F 1 "0R" V 9700 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10030 2050 50  0001 C CNN
+F 3 "~" H 10100 2050 50  0001 C CNN
+	1    10100 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR013
+U 1 1 5EEE0340
+P 10300 1800
+F 0 "#PWR013" H 10300 1650 50  0001 C CNN
+F 1 "+3.3V" H 10315 1973 50  0000 C CNN
+F 2 "" H 10300 1800 50  0001 C CNN
+F 3 "" H 10300 1800 50  0001 C CNN
+	1    10300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR026
+U 1 1 5EEE0346
+P 10300 2100
+F 0 "#PWR026" H 10300 1850 50  0001 C CNN
+F 1 "GNDD" H 10304 1945 50  0000 C CNN
+F 2 "" H 10300 2100 50  0001 C CNN
+F 3 "" H 10300 2100 50  0001 C CNN
+	1    10300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1850 9900 1950
+Wire Wire Line
+	9900 2050 9950 2050
+Wire Wire Line
+	9900 1850 9950 1850
+Wire Wire Line
+	9900 1950 9950 1950
+Connection ~ 9900 1950
+Wire Wire Line
+	9900 1950 9900 2050
+Wire Wire Line
+	10250 1850 10300 1850
+Wire Wire Line
+	10300 1850 10300 1800
+Wire Wire Line
+	10250 2050 10300 2050
+Wire Wire Line
+	10300 2050 10300 2100
+Wire Wire Line
+	10300 1950 10250 1950
+Text Label 10300 1950 0    50   ~ 0
+3_MCU
+Text Label 9850 1950 2    50   ~ 0
+3_ADC
+Wire Wire Line
+	9850 1950 9900 1950
+$Comp
+L photodiode_adc:R-Device R13
+U 1 1 5EEE86A9
+P 9100 1850
+F 0 "R13" V 8800 1650 50  0000 C CNN
+F 1 "0R" V 8800 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 1850 50  0001 C CNN
+F 3 "~" H 9100 1850 50  0001 C CNN
+	1    9100 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R15
+U 1 1 5EEE86AF
+P 9100 1950
+F 0 "R15" V 8800 1750 50  0000 C CNN
+F 1 "0R" V 8900 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 1950 50  0001 C CNN
+F 3 "~" H 9100 1950 50  0001 C CNN
+	1    9100 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R17
+U 1 1 5EEE86B5
+P 9100 2050
+F 0 "R17" V 8800 1850 50  0000 C CNN
+F 1 "0R" V 8700 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 2050 50  0001 C CNN
+F 3 "~" H 9100 2050 50  0001 C CNN
+	1    9100 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR012
+U 1 1 5EEE86BB
+P 9300 1800
+F 0 "#PWR012" H 9300 1650 50  0001 C CNN
+F 1 "+3.3V" H 9315 1973 50  0000 C CNN
+F 2 "" H 9300 1800 50  0001 C CNN
+F 3 "" H 9300 1800 50  0001 C CNN
+	1    9300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR025
+U 1 1 5EEE86C1
+P 9300 2100
+F 0 "#PWR025" H 9300 1850 50  0001 C CNN
+F 1 "GNDD" H 9304 1945 50  0000 C CNN
+F 2 "" H 9300 2100 50  0001 C CNN
+F 3 "" H 9300 2100 50  0001 C CNN
+	1    9300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1850 8900 1950
+Wire Wire Line
+	8900 2050 8950 2050
+Wire Wire Line
+	8900 1850 8950 1850
+Wire Wire Line
+	8900 1950 8950 1950
+Connection ~ 8900 1950
+Wire Wire Line
+	8900 1950 8900 2050
+Wire Wire Line
+	9250 1850 9300 1850
+Wire Wire Line
+	9300 1850 9300 1800
+Wire Wire Line
+	9250 2050 9300 2050
+Wire Wire Line
+	9300 2050 9300 2100
+Wire Wire Line
+	9300 1950 9250 1950
+Text Label 9300 1950 0    50   ~ 0
+2_MCU
+Text Label 8850 1950 2    50   ~ 0
+2_ADC
+Wire Wire Line
+	8850 1950 8900 1950
+$Comp
+L photodiode_adc:R-Device R3
+U 1 1 5EEEC45D
+P 9100 1100
+F 0 "R3" V 8800 900 50  0000 C CNN
+F 1 "0R" V 8800 1050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 1100 50  0001 C CNN
+F 3 "~" H 9100 1100 50  0001 C CNN
+	1    9100 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R5
+U 1 1 5EEEC463
+P 9100 1200
+F 0 "R5" V 8800 1000 50  0000 C CNN
+F 1 "0R" V 8900 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 1200 50  0001 C CNN
+F 3 "~" H 9100 1200 50  0001 C CNN
+	1    9100 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R10
+U 1 1 5EEEC469
+P 9100 1300
+F 0 "R10" V 8800 1100 50  0000 C CNN
+F 1 "0R" V 8700 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 1300 50  0001 C CNN
+F 3 "~" H 9100 1300 50  0001 C CNN
+	1    9100 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR05
+U 1 1 5EEEC46F
+P 9300 1050
+F 0 "#PWR05" H 9300 900 50  0001 C CNN
+F 1 "+3.3V" H 9315 1223 50  0000 C CNN
+F 2 "" H 9300 1050 50  0001 C CNN
+F 3 "" H 9300 1050 50  0001 C CNN
+	1    9300 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR07
+U 1 1 5EEEC475
+P 9300 1350
+F 0 "#PWR07" H 9300 1100 50  0001 C CNN
+F 1 "GNDD" H 9304 1195 50  0000 C CNN
+F 2 "" H 9300 1350 50  0001 C CNN
+F 3 "" H 9300 1350 50  0001 C CNN
+	1    9300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1100 8900 1200
+Wire Wire Line
+	8900 1300 8950 1300
+Wire Wire Line
+	8900 1100 8950 1100
+Wire Wire Line
+	8900 1200 8950 1200
+Connection ~ 8900 1200
+Wire Wire Line
+	8900 1200 8900 1300
+Wire Wire Line
+	9250 1100 9300 1100
+Wire Wire Line
+	9300 1100 9300 1050
+Wire Wire Line
+	9250 1300 9300 1300
+Wire Wire Line
+	9300 1300 9300 1350
+Wire Wire Line
+	9300 1200 9250 1200
+Text Label 9300 1200 0    50   ~ 0
+0_MCU
+Text Label 8850 1200 2    50   ~ 0
+0_ADC
+Wire Wire Line
+	8850 1200 8900 1200
+Wire Wire Line
+	5850 4850 5800 4850
+Wire Wire Line
+	5850 4950 5800 4950
+Wire Wire Line
+	5850 5050 5800 5050
+Wire Wire Line
+	5850 5150 5800 5150
+Text Label 5850 4850 0    50   ~ 0
+0_ADC
+Text Label 5850 4950 0    50   ~ 0
+1_ADC
+Text Label 5850 5050 0    50   ~ 0
+2_ADC
+Text Label 5850 5150 0    50   ~ 0
+3_ADC
+$Comp
+L photodiode_adc:TestPoint-Connector TP4
+U 1 1 5EF016A1
+P 5850 3850
+F 0 "TP4" V 5850 4050 50  0000 L CNN
+F 1 "TestPoint" V 5850 4300 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6050 3850 50  0001 C CNN
+F 3 "~" H 6050 3850 50  0001 C CNN
+	1    5850 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:TestPoint-Connector TP5
+U 1 1 5EF02588
+P 5850 3950
+F 0 "TP5" V 5850 4150 50  0000 L CNN
+F 1 "TestPoint" V 5850 4400 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6050 3950 50  0001 C CNN
+F 3 "~" H 6050 3950 50  0001 C CNN
+	1    5850 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R19
+U 1 1 5EF13CB5
+P 9100 2600
+F 0 "R19" V 8800 2400 50  0000 C CNN
+F 1 "0R" V 8800 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 2600 50  0001 C CNN
+F 3 "~" H 9100 2600 50  0001 C CNN
+	1    9100 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R20
+U 1 1 5EF13CBB
+P 9100 2700
+F 0 "R20" V 8800 2500 50  0000 C CNN
+F 1 "0R" V 8800 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9030 2700 50  0001 C CNN
+F 3 "~" H 9100 2700 50  0001 C CNN
+	1    9100 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR029
+U 1 1 5EF13CC7
+P 9300 2550
+F 0 "#PWR029" H 9300 2400 50  0001 C CNN
+F 1 "+3.3V" H 9315 2723 50  0000 C CNN
+F 2 "" H 9300 2550 50  0001 C CNN
+F 3 "" H 9300 2550 50  0001 C CNN
+	1    9300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR030
+U 1 1 5EF13CCD
+P 9300 2900
+F 0 "#PWR030" H 9300 2650 50  0001 C CNN
+F 1 "GNDD" H 9304 2745 50  0000 C CNN
+F 2 "" H 9300 2900 50  0001 C CNN
+F 3 "" H 9300 2900 50  0001 C CNN
+	1    9300 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2600 8900 2700
+Wire Wire Line
+	8900 2850 8950 2850
+Wire Wire Line
+	8900 2600 8950 2600
+Wire Wire Line
+	8900 2700 8950 2700
+Connection ~ 8900 2700
+Wire Wire Line
+	9250 2600 9300 2600
+Wire Wire Line
+	9300 2600 9300 2550
+Wire Wire Line
+	9250 2850 9300 2850
+Wire Wire Line
+	9300 2850 9300 2900
+Wire Wire Line
+	9300 2700 9250 2700
+Text Label 9300 2700 0    50   ~ 0
+RST_MCU
+Text Label 8850 2700 2    50   ~ 0
+RST_ADC
+Wire Wire Line
+	8850 2700 8900 2700
+$Comp
+L photodiode_adc:C-Device C19
+U 1 1 5EF17FFC
+P 9100 2850
+F 0 "C19" V 8750 2650 50  0000 C CNN
+F 1 "100n" V 8750 2850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9138 2700 50  0001 C CNN
+F 3 "~" H 9100 2850 50  0001 C CNN
+	1    9100 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 2700 8900 2850
+Wire Wire Line
+	5850 3850 5800 3850
+Wire Wire Line
+	5850 3950 5800 3950
+Wire Wire Line
+	5850 4050 5800 4050
+$Comp
+L photodiode_adc:TestPoint-Connector TP6
+U 1 1 5EF408C7
+P 5850 4100
+F 0 "TP6" V 5850 4300 50  0000 L CNN
+F 1 "TestPoint" V 5850 4550 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 6050 4100 50  0001 C CNN
+F 3 "~" H 6050 4100 50  0001 C CNN
+	1    5850 4100
+	0    1    1    0   
+$EndComp
+Text Label 5850 4250 0    50   ~ 0
+~DRDY~
+Wire Wire Line
+	5800 4250 5850 4250
+Connection ~ 5800 4250
+Wire Wire Line
+	5850 4100 5800 4100
+Wire Wire Line
+	5800 4100 5800 4250
+Text Label 5850 4050 0    50   ~ 0
+RST_ADC
+Wire Wire Line
+	9550 4100 9600 4100
+Wire Wire Line
+	9550 4200 9600 4200
+Wire Wire Line
+	9550 4300 9600 4300
+Wire Wire Line
+	9550 4400 9600 4400
+Wire Wire Line
+	9550 4500 9600 4500
+Wire Wire Line
+	9550 4600 9600 4600
+Text Label 9550 4100 2    50   ~ 0
+~DRDY~
+Text Label 9550 4200 2    50   ~ 0
+RST_MCU
+Text Label 9550 4300 2    50   ~ 0
+0_MCU
+Text Label 9550 4400 2    50   ~ 0
+1_MCU
+Text Label 9550 4500 2    50   ~ 0
+2_MCU
+Text Label 9550 4600 2    50   ~ 0
+3_MCU
+$Comp
+L photodiode_adc:R-Device R24
+U 1 1 5EF75158
+P 9400 4700
+F 0 "R24" V 9200 4450 50  0000 C CNN
+F 1 "0R" V 9300 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9330 4700 50  0001 C CNN
+F 3 "~" H 9400 4700 50  0001 C CNN
+	1    9400 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 4700 9600 4700
+Wire Wire Line
+	9200 4700 9250 4700
+Text Label 9200 4700 2    50   ~ 0
+MCLK
+$Comp
+L photodiode_adc:+5VA-power #PWR037
+U 1 1 5EF87C5E
+P 2900 4050
+F 0 "#PWR037" H 2900 3900 50  0001 C CNN
+F 1 "+5VA" H 2915 4223 50  0000 C CNN
+F 2 "" H 2900 4050 50  0001 C CNN
+F 3 "" H 2900 4050 50  0001 C CNN
+	1    2900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:R-Device R21
+U 1 1 5EF88FFD
+P 2900 3750
+F 0 "R21" V 2800 3400 50  0000 C CNN
+F 1 "42.2k" V 2800 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2830 3750 50  0001 C CNN
+F 3 "~" H 2900 3750 50  0001 C CNN
+	1    2900 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:C-Device C20
+U 1 1 5EF89A8F
+P 2900 3600
+F 0 "C20" V 2850 3250 50  0000 C CNN
+F 1 "360p" V 2850 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2938 3450 50  0001 C CNN
+F 3 "~" H 2900 3600 50  0001 C CNN
+	1    2900 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 3750 3400 3750
+Wire Wire Line
+	3400 3750 3400 4250
+Connection ~ 3400 4250
+Wire Wire Line
+	3400 4250 3350 4250
+Wire Wire Line
+	3050 3600 3400 3600
+Wire Wire Line
+	3400 3600 3400 3750
+Connection ~ 3400 3750
+Wire Wire Line
+	2400 3600 2400 3750
+Connection ~ 2400 4250
+Wire Wire Line
+	2400 4250 2450 4250
+Wire Wire Line
+	2750 3750 2400 3750
+Connection ~ 2400 3750
+Wire Wire Line
+	2400 3750 2400 4250
+$Comp
+L photodiode_adc:D_Photo_ALT-Device D2
+U 1 1 5EFB3EB9
+P 2250 4500
+F 0 "D2" V 2050 5150 50  0000 R CNN
+F 1 "D_Photo_ALT" V 2150 5150 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_Power_L48.0mm_W12.5mm_P7.62mm_Vertical" H 2200 4500 50  0001 C CNN
+F 3 "~" H 2200 4500 50  0001 C CNN
+	1    2250 4500
+	0    -1   1    0   
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR038
+U 1 1 5EFB6BF9
+P 2400 4400
+F 0 "#PWR038" H 2400 4150 50  0001 C CNN
+F 1 "GNDA" H 2405 4227 50  0000 C CNN
+F 2 "" H 2400 4400 50  0001 C CNN
+F 3 "" H 2400 4400 50  0001 C CNN
+	1    2400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4100 2900 4050
+Wire Wire Line
+	2250 4300 2250 4250
+Wire Wire Line
+	2250 4250 2400 4250
+Wire Wire Line
+	2400 4400 2400 4350
+Wire Wire Line
+	2400 4350 2450 4350
+Text Label 1650 4600 2    50   ~ 0
+V_REV
+Wire Wire Line
+	2200 4650 2250 4650
+Wire Wire Line
+	2250 4650 2250 4600
+Wire Wire Line
+	4200 4150 3850 4150
+Connection ~ 3850 4150
+Wire Wire Line
+	3350 4950 3400 4950
+Wire Wire Line
+	3400 4950 3400 5500
+Wire Wire Line
+	3400 5500 2400 5500
+Wire Wire Line
+	2400 5500 2400 4950
+Wire Wire Line
+	2400 4950 2450 4950
+$Comp
+L photodiode_adc:R-Device R25
+U 1 1 5EFE3C72
+P 2000 5000
+F 0 "R25" V 2000 4200 50  0000 C CNN
+F 1 "R" V 2100 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1930 5000 50  0001 C CNN
+F 3 "~" H 2000 5000 50  0001 C CNN
+	1    2000 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R26
+U 1 1 5EFE46A4
+P 2000 5100
+F 0 "R26" V 2000 4300 50  0000 C CNN
+F 1 "R" V 1900 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1930 5100 50  0001 C CNN
+F 3 "~" H 2000 5100 50  0001 C CNN
+	1    2000 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 3600 2400 3600
+$Comp
+L photodiode_adc:AD8622 U4
+U 1 1 5EE6274C
+P 2900 4050
+F 0 "U4" H 3000 3950 50  0000 C CNN
+F 1 "AD8622" H 3100 2950 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3050 3950 50  0001 C CNN
+F 3 "" H 3050 3950 50  0001 C CNN
+	1    2900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:-5VA-power #PWR048
+U 1 1 5EF88326
+P 2900 5250
+F 0 "#PWR048" H 2900 5350 50  0001 C CNN
+F 1 "-5VA" H 2915 5423 50  0000 C CNN
+F 2 "" H 2900 5250 50  0001 C CNN
+F 3 "" H 2900 5250 50  0001 C CNN
+	1    2900 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:-5VA-power #PWR047
+U 1 1 5EFFDC30
+P 1800 5100
+F 0 "#PWR047" H 1800 5200 50  0001 C CNN
+F 1 "-5VA" V 1815 5227 50  0000 L CNN
+F 2 "" H 1800 5100 50  0001 C CNN
+F 3 "" H 1800 5100 50  0001 C CNN
+	1    1800 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR046
+U 1 1 5EFFE263
+P 1800 5000
+F 0 "#PWR046" H 1800 4850 50  0001 C CNN
+F 1 "+5VA" V 1815 5127 50  0000 L CNN
+F 2 "" H 1800 5000 50  0001 C CNN
+F 3 "" H 1800 5000 50  0001 C CNN
+	1    1800 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2350 5100 2350 5050
+Wire Wire Line
+	2450 5050 2350 5050
+Connection ~ 2350 5050
+Wire Wire Line
+	2350 5050 2350 5000
+Wire Wire Line
+	1850 5000 1800 5000
+Wire Wire Line
+	1850 5100 1800 5100
+$Comp
+L photodiode_adc:TestPoint-Connector TP2
+U 1 1 5F040060
+P 3400 3600
+F 0 "TP2" V 3400 3800 50  0000 L CNN
+F 1 "TestPoint" V 3400 4050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3600 3600 50  0001 C CNN
+F 3 "~" H 3600 3600 50  0001 C CNN
+	1    3400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:TestPoint-Connector TP3
+U 1 1 5F041278
+P 3850 3650
+F 0 "TP3" V 3850 3850 50  0000 L CNN
+F 1 "TestPoint" V 3850 4100 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4050 3650 50  0001 C CNN
+F 3 "~" H 4050 3650 50  0001 C CNN
+	1    3850 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 3400 3600
+Wire Wire Line
+	3400 4250 4200 4250
+$Comp
+L photodiode_adc:TestPoint-Connector TP7
+U 1 1 5F04AFB5
+P 3400 4950
+F 0 "TP7" V 3400 5150 50  0000 L CNN
+F 1 "TestPoint" V 3500 5050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 3600 4950 50  0001 C CNN
+F 3 "~" H 3600 4950 50  0001 C CNN
+	1    3400 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 3400 4950
+Text Label 3450 4950 0    50   ~ 0
+V_REV
+Wire Wire Line
+	3450 4950 3400 4950
+$Comp
+L photodiode_adc:R-Device R22
+U 1 1 5F055967
+P 2000 4600
+F 0 "R22" V 2000 3800 50  0000 C CNN
+F 1 "0R" V 2000 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1930 4600 50  0001 C CNN
+F 3 "~" H 2000 4600 50  0001 C CNN
+	1    2000 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R23
+U 1 1 5F056AF6
+P 2000 4700
+F 0 "R23" V 2000 3900 50  0000 C CNN
+F 1 "0R" V 2000 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1930 4700 50  0001 C CNN
+F 3 "~" H 2000 4700 50  0001 C CNN
+	1    2000 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR042
+U 1 1 5F06383D
+P 1800 4700
+F 0 "#PWR042" H 1800 4450 50  0001 C CNN
+F 1 "GNDA" V 1805 4573 50  0000 R CNN
+F 2 "" H 1800 4700 50  0001 C CNN
+F 3 "" H 1800 4700 50  0001 C CNN
+	1    1800 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1650 4600 1850 4600
+Wire Wire Line
+	1850 4700 1800 4700
+Wire Wire Line
+	2150 4600 2200 4600
+Wire Wire Line
+	2200 4600 2200 4650
+Wire Wire Line
+	2150 4700 2200 4700
+Wire Wire Line
+	2200 4700 2200 4650
+Connection ~ 2200 4650
+Wire Wire Line
+	2150 5000 2350 5000
+Wire Wire Line
+	2150 5100 2350 5100
+Wire Wire Line
+	2900 5200 2900 5250
+$Comp
+L photodiode_adc:Ferrite_Bead_Small-Device FB1
+U 1 1 5F0A8681
+P 6400 950
+F 0 "FB1" V 6200 1100 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 6200 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6330 950 50  0001 C CNN
+F 3 "~" H 6400 950 50  0001 C CNN
+	1    6400 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:C-Device C3
+U 1 1 5F0A9BEF
+P 6550 1150
+F 0 "C3" H 6050 1250 50  0000 L CNN
+F 1 "10u" H 6250 1250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6588 1000 50  0001 C CNN
+F 3 "~" H 6550 1150 50  0001 C CNN
+	1    6550 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C4
+U 1 1 5F0AADBF
+P 6750 1150
+F 0 "C4" H 6050 1150 50  0000 L CNN
+F 1 "1u" H 6250 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6788 1000 50  0001 C CNN
+F 3 "~" H 6750 1150 50  0001 C CNN
+	1    6750 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C5
+U 1 1 5F0AB104
+P 6950 1150
+F 0 "C5" H 6050 1050 50  0000 L CNN
+F 1 "100n" H 6250 1050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6988 1000 50  0001 C CNN
+F 3 "~" H 6950 1150 50  0001 C CNN
+	1    6950 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:Ferrite_Bead_Small-Device FB2
+U 1 1 5F0AB540
+P 7100 950
+F 0 "FB2" V 7000 400 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 7000 950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7030 950 50  0001 C CNN
+F 3 "~" H 7100 950 50  0001 C CNN
+	1    7100 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:C-Device C6
+U 1 1 5F0ABC17
+P 7250 1150
+F 0 "C6" H 7600 1200 50  0000 L CNN
+F 1 "1u" H 7750 1200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7288 1000 50  0001 C CNN
+F 3 "~" H 7250 1150 50  0001 C CNN
+	1    7250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C7
+U 1 1 5F0AC6C8
+P 7450 1150
+F 0 "C7" H 7600 1100 50  0000 L CNN
+F 1 "100n" H 7750 1100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7488 1000 50  0001 C CNN
+F 3 "~" H 7450 1150 50  0001 C CNN
+	1    7450 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 950  6550 950 
+Wire Wire Line
+	7450 1000 7450 950 
+Connection ~ 7450 950 
+Wire Wire Line
+	7450 950  7250 950 
+Wire Wire Line
+	7250 1000 7250 950 
+Connection ~ 7250 950 
+Wire Wire Line
+	7250 950  7200 950 
+Wire Wire Line
+	7250 1300 7250 1350
+Wire Wire Line
+	7250 1350 7350 1350
+Wire Wire Line
+	7450 1350 7450 1300
+Wire Wire Line
+	7350 1400 7350 1350
+Connection ~ 7350 1350
+Wire Wire Line
+	7350 1350 7450 1350
+Wire Wire Line
+	6950 1300 6950 1350
+Wire Wire Line
+	6950 1350 6750 1350
+Wire Wire Line
+	6550 1350 6550 1300
+Wire Wire Line
+	6750 1400 6750 1350
+Connection ~ 6750 1350
+Wire Wire Line
+	6750 1350 6550 1350
+Wire Wire Line
+	6750 1300 6750 1350
+Wire Wire Line
+	6950 1000 6950 950 
+Connection ~ 6950 950 
+Wire Wire Line
+	6950 950  7000 950 
+Wire Wire Line
+	6750 1000 6750 950 
+Connection ~ 6750 950 
+Wire Wire Line
+	6750 950  6950 950 
+Wire Wire Line
+	6550 1000 6550 950 
+Connection ~ 6550 950 
+Wire Wire Line
+	6550 950  6750 950 
+$Comp
+L photodiode_adc:+5V-power #PWR02
+U 1 1 5F13DECB
+P 6200 900
+F 0 "#PWR02" H 6200 750 50  0001 C CNN
+F 1 "+5V" H 6215 1073 50  0000 C CNN
+F 2 "" H 6200 900 50  0001 C CNN
+F 3 "" H 6200 900 50  0001 C CNN
+	1    6200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR03
+U 1 1 5F13E8DC
+P 7550 900
+F 0 "#PWR03" H 7550 750 50  0001 C CNN
+F 1 "+5VA" H 7565 1073 50  0000 C CNN
+F 2 "" H 7550 900 50  0001 C CNN
+F 3 "" H 7550 900 50  0001 C CNN
+	1    7550 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 900  6200 950 
+Wire Wire Line
+	6200 950  6300 950 
+Wire Wire Line
+	7550 950  7550 900 
+Wire Wire Line
+	7450 950  7550 950 
+$Comp
+L photodiode_adc:+5V-power #PWR034
+U 1 1 5F15AB37
+P 10350 3650
+F 0 "#PWR034" H 10350 3500 50  0001 C CNN
+F 1 "+5V" H 10365 3823 50  0000 C CNN
+F 2 "" H 10350 3650 50  0001 C CNN
+F 3 "" H 10350 3650 50  0001 C CNN
+	1    10350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+3V3-power #PWR033
+U 1 1 5F15B7D9
+P 10150 3650
+F 0 "#PWR033" H 10150 3500 50  0001 C CNN
+F 1 "+3V3" H 10165 3823 50  0000 C CNN
+F 2 "" H 10150 3650 50  0001 C CNN
+F 3 "" H 10150 3650 50  0001 C CNN
+	1    10150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 3700 10350 3700
+Wire Wire Line
+	10350 3700 10350 3650
+Wire Wire Line
+	10200 3700 10150 3700
+Wire Wire Line
+	10150 3700 10150 3650
+$Comp
+L photodiode_adc:Ferrite_Bead_Small-Device FB3
+U 1 1 5F18CEFF
+P 6400 1900
+F 0 "FB3" V 6200 2050 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 6200 2600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6330 1900 50  0001 C CNN
+F 3 "~" H 6400 1900 50  0001 C CNN
+	1    6400 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:C-Device C14
+U 1 1 5F18CF05
+P 6550 2100
+F 0 "C14" H 6050 2200 50  0000 L CNN
+F 1 "10u" H 6250 2200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6588 1950 50  0001 C CNN
+F 3 "~" H 6550 2100 50  0001 C CNN
+	1    6550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C15
+U 1 1 5F18CF0B
+P 6750 2100
+F 0 "C15" H 6050 2100 50  0000 L CNN
+F 1 "1u" H 6250 2100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6788 1950 50  0001 C CNN
+F 3 "~" H 6750 2100 50  0001 C CNN
+	1    6750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C16
+U 1 1 5F18CF11
+P 6950 2100
+F 0 "C16" H 6050 2000 50  0000 L CNN
+F 1 "100n" H 6250 2000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6988 1950 50  0001 C CNN
+F 3 "~" H 6950 2100 50  0001 C CNN
+	1    6950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:Ferrite_Bead_Small-Device FB4
+U 1 1 5F18CF17
+P 7100 1900
+F 0 "FB4" V 7000 1350 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 7000 1900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7030 1900 50  0001 C CNN
+F 3 "~" H 7100 1900 50  0001 C CNN
+	1    7100 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:C-Device C17
+U 1 1 5F18CF1D
+P 7250 2100
+F 0 "C17" H 7600 2150 50  0000 L CNN
+F 1 "1u" H 7750 2150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7288 1950 50  0001 C CNN
+F 3 "~" H 7250 2100 50  0001 C CNN
+	1    7250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C18
+U 1 1 5F18CF23
+P 7450 2100
+F 0 "C18" H 7600 2050 50  0000 L CNN
+F 1 "100n" H 7750 2050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7488 1950 50  0001 C CNN
+F 3 "~" H 7450 2100 50  0001 C CNN
+	1    7450 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1900 6550 1900
+Wire Wire Line
+	7450 1950 7450 1900
+Connection ~ 7450 1900
+Wire Wire Line
+	7450 1900 7250 1900
+Wire Wire Line
+	7250 1950 7250 1900
+Connection ~ 7250 1900
+Wire Wire Line
+	7250 1900 7200 1900
+Wire Wire Line
+	7250 2250 7250 2300
+Wire Wire Line
+	7250 2300 7350 2300
+Wire Wire Line
+	7450 2300 7450 2250
+Wire Wire Line
+	7350 2350 7350 2300
+Connection ~ 7350 2300
+Wire Wire Line
+	7350 2300 7450 2300
+Wire Wire Line
+	6950 2250 6950 2300
+Wire Wire Line
+	6950 2300 6750 2300
+Wire Wire Line
+	6550 2300 6550 2250
+Wire Wire Line
+	6750 2350 6750 2300
+Connection ~ 6750 2300
+Wire Wire Line
+	6750 2300 6550 2300
+Wire Wire Line
+	6750 2250 6750 2300
+Wire Wire Line
+	6950 1950 6950 1900
+Connection ~ 6950 1900
+Wire Wire Line
+	6950 1900 7000 1900
+Wire Wire Line
+	6750 1950 6750 1900
+Connection ~ 6750 1900
+Wire Wire Line
+	6750 1900 6950 1900
+Wire Wire Line
+	6550 1950 6550 1900
+Connection ~ 6550 1900
+Wire Wire Line
+	6550 1900 6750 1900
+Wire Wire Line
+	6200 1850 6200 1900
+Wire Wire Line
+	6200 1900 6300 1900
+Wire Wire Line
+	7550 1900 7550 1850
+Wire Wire Line
+	7450 1900 7550 1900
+$Comp
+L photodiode_adc:+3V3-power #PWR014
+U 1 1 5F19CDB4
+P 6200 1850
+F 0 "#PWR014" H 6200 1700 50  0001 C CNN
+F 1 "+3V3" H 6215 2023 50  0000 C CNN
+F 2 "" H 6200 1850 50  0001 C CNN
+F 3 "" H 6200 1850 50  0001 C CNN
+	1    6200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR015
+U 1 1 5F19CE70
+P 7550 1850
+F 0 "#PWR015" H 7550 1700 50  0001 C CNN
+F 1 "+3.3V" H 7565 2023 50  0000 C CNN
+F 2 "" H 7550 1850 50  0001 C CNN
+F 3 "" H 7550 1850 50  0001 C CNN
+	1    7550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR027
+U 1 1 5F1AE324
+P 6750 2350
+F 0 "#PWR027" H 6750 2100 50  0001 C CNN
+F 1 "GNDD" H 6754 2195 50  0000 C CNN
+F 2 "" H 6750 2350 50  0001 C CNN
+F 3 "" H 6750 2350 50  0001 C CNN
+	1    6750 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR028
+U 1 1 5F1AEAD9
+P 7350 2350
+F 0 "#PWR028" H 7350 2100 50  0001 C CNN
+F 1 "GNDD" H 7354 2195 50  0000 C CNN
+F 2 "" H 7350 2350 50  0001 C CNN
+F 3 "" H 7350 2350 50  0001 C CNN
+	1    7350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR018
+U 1 1 5F1AEB71
+P 1500 1900
+F 0 "#PWR018" H 1500 1650 50  0001 C CNN
+F 1 "GNDD" H 1504 1745 50  0000 C CNN
+F 2 "" H 1500 1900 50  0001 C CNN
+F 3 "" H 1500 1900 50  0001 C CNN
+	1    1500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1300 1500 1300
+Wire Wire Line
+	1500 1300 1500 1400
+Wire Wire Line
+	1550 1500 1500 1500
+Connection ~ 1500 1500
+Wire Wire Line
+	1550 1400 1500 1400
+Connection ~ 1500 1400
+Wire Wire Line
+	1500 1400 1500 1500
+$Comp
+L photodiode_adc:C-Device C9
+U 1 1 5F1E0D6C
+P 1300 1200
+F 0 "C9" H 1185 1154 50  0000 R CNN
+F 1 "100n" H 1185 1245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1338 1050 50  0001 C CNN
+F 3 "~" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	1    0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R2
+U 1 1 5F1E1EB3
+P 1000 1050
+F 0 "R2" V 850 1000 50  0000 C CNN
+F 1 "10R" V 850 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 930 1050 50  0001 C CNN
+F 3 "~" H 1000 1050 50  0001 C CNN
+	1    1000 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR017
+U 1 1 5F1E375A
+P 1300 1900
+F 0 "#PWR017" H 1300 1650 50  0001 C CNN
+F 1 "GNDD" H 1304 1745 50  0000 C CNN
+F 2 "" H 1300 1900 50  0001 C CNN
+F 3 "" H 1300 1900 50  0001 C CNN
+	1    1300 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 950  800  950 
+Wire Wire Line
+	800  950  800  1050
+Wire Wire Line
+	800  1050 850  1050
+Wire Wire Line
+	1150 1050 1300 1050
+Wire Wire Line
+	1550 1050 1500 1050
+Connection ~ 1300 1050
+$Comp
+L photodiode_adc:C-Device C8
+U 1 1 5F22A4B7
+P 800 1200
+F 0 "C8" H 685 1154 50  0000 R CNN
+F 1 "10u" H 685 1245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 838 1050 50  0001 C CNN
+F 3 "~" H 800 1200 50  0001 C CNN
+	1    800  1200
+	1    0    0    1   
+$EndComp
+Connection ~ 800  1050
+$Comp
+L photodiode_adc:+5V-power #PWR01
+U 1 1 5F22B1E3
+P 800 900
+F 0 "#PWR01" H 800 750 50  0001 C CNN
+F 1 "+5V" H 815 1073 50  0000 C CNN
+F 2 "" H 800 900 50  0001 C CNN
+F 3 "" H 800 900 50  0001 C CNN
+	1    800  900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  900  800  950 
+Connection ~ 800  950 
+Wire Wire Line
+	1550 1150 1500 1150
+Wire Wire Line
+	1500 1150 1500 1050
+Connection ~ 1500 1050
+Wire Wire Line
+	1500 1050 1300 1050
+$Comp
+L photodiode_adc:C-Device C10
+U 1 1 5F250911
+P 2500 1700
+F 0 "C10" H 2385 1654 50  0000 R CNN
+F 1 "4n7" H 2385 1745 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2538 1550 50  0001 C CNN
+F 3 "~" H 2500 1700 50  0001 C CNN
+	1    2500 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R7
+U 1 1 5F250F04
+P 3150 1250
+F 0 "R7" H 3050 1250 50  0000 R CNN
+F 1 "742k" H 3050 1350 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3080 1250 50  0001 C CNN
+F 3 "~" H 3150 1250 50  0001 C CNN
+	1    3150 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:D_Schottky-Device D1
+U 1 1 5F251DBB
+P 2800 1400
+F 0 "D1" H 2650 1650 50  0000 C CNN
+F 1 "D_Schottky" H 2800 1550 50  0000 C CNN
+F 2 "Diode_SMD:D_SMF" H 2800 1400 50  0001 C CNN
+F 3 "~" H 2800 1400 50  0001 C CNN
+	1    2800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:L-Device L1
+U 1 1 5F2563C1
+P 2650 1700
+F 0 "L1" H 2702 1746 50  0000 L CNN
+F 1 "4u7" H 2702 1655 50  0000 L CNN
+F 2 "Inductor_SMD:L_Wuerth_MAPI-3020" H 2650 1700 50  0001 C CNN
+F 3 "~" H 2650 1700 50  0001 C CNN
+	1    2650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:R-Device R1
+U 1 1 5F257D8B
+P 3150 950
+F 0 "R1" H 3050 850 50  0000 R CNN
+F 1 "150k" H 3050 950 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3080 950 50  0001 C CNN
+F 3 "~" H 3150 950 50  0001 C CNN
+	1    3150 950 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 1500 2500 1500
+Wire Wire Line
+	2500 1500 2500 1550
+Wire Wire Line
+	2450 1400 2650 1400
+Wire Wire Line
+	2650 1550 2650 1400
+Connection ~ 2650 1400
+Wire Wire Line
+	2950 1400 3050 1400
+Wire Wire Line
+	2450 1200 2500 1200
+Wire Wire Line
+	2500 1200 2500 1100
+Wire Wire Line
+	2500 1100 3150 1100
+Connection ~ 3150 1100
+Wire Wire Line
+	2450 950  2500 950 
+Wire Wire Line
+	2500 950  2500 800 
+Wire Wire Line
+	2500 800  3150 800 
+Wire Wire Line
+	3050 1400 3050 1300
+Wire Wire Line
+	3050 1300 2450 1300
+Connection ~ 3050 1400
+Wire Wire Line
+	3050 1400 3150 1400
+$Comp
+L photodiode_adc:GNDD-power #PWR019
+U 1 1 5F2E2723
+P 2500 1900
+F 0 "#PWR019" H 2500 1650 50  0001 C CNN
+F 1 "GNDD" H 2504 1745 50  0000 C CNN
+F 2 "" H 2500 1900 50  0001 C CNN
+F 3 "" H 2500 1900 50  0001 C CNN
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1850 2500 1850
+Wire Wire Line
+	2500 1900 2500 1850
+Connection ~ 2500 1850
+Wire Wire Line
+	1500 1500 1500 1900
+Wire Wire Line
+	1300 1350 1300 1900
+$Comp
+L photodiode_adc:C-Device C11
+U 1 1 5F33A227
+P 3150 1700
+F 0 "C11" H 3035 1654 50  0000 R CNN
+F 1 "22u" H 3035 1745 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3188 1550 50  0001 C CNN
+F 3 "~" H 3150 1700 50  0001 C CNN
+	1    3150 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR020
+U 1 1 5F33A741
+P 3150 1900
+F 0 "#PWR020" H 3150 1650 50  0001 C CNN
+F 1 "GNDD" H 3154 1745 50  0000 C CNN
+F 2 "" H 3150 1900 50  0001 C CNN
+F 3 "" H 3150 1900 50  0001 C CNN
+	1    3150 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1900 3150 1850
+Wire Wire Line
+	3150 1550 3150 1400
+Connection ~ 3150 1400
+$Comp
+L photodiode_adc:GNDD-power #PWR016
+U 1 1 5F37CC9F
+P 800 1900
+F 0 "#PWR016" H 800 1650 50  0001 C CNN
+F 1 "GNDD" H 804 1745 50  0000 C CNN
+F 2 "" H 800 1900 50  0001 C CNN
+F 3 "" H 800 1900 50  0001 C CNN
+	1    800  1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  1350 800  1900
+$Comp
+L photodiode_adc:C-Device C1
+U 1 1 5F39308E
+P 3550 950
+F 0 "C1" H 3665 996 50  0000 L CNN
+F 1 "220n" H 3665 905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3588 800 50  0001 C CNN
+F 3 "~" H 3550 950 50  0001 C CNN
+	1    3550 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR021
+U 1 1 5F393BD2
+P 3550 1900
+F 0 "#PWR021" H 3550 1650 50  0001 C CNN
+F 1 "GNDD" H 3554 1745 50  0000 C CNN
+F 2 "" H 3550 1900 50  0001 C CNN
+F 3 "" H 3550 1900 50  0001 C CNN
+	1    3550 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 800  3550 800 
+Connection ~ 3150 800 
+Wire Wire Line
+	3550 1100 3550 1900
+$Comp
+L photodiode_adc:C-Device C2
+U 1 1 5F3C0DBF
+P 3300 1100
+F 0 "C2" V 3250 450 50  0000 C CNN
+F 1 "10p" V 3250 650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3338 950 50  0001 C CNN
+F 3 "~" H 3300 1100 50  0001 C CNN
+	1    3300 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R8
+U 1 1 5F3C167E
+P 3450 1250
+F 0 "R8" H 3250 1200 50  0000 R CNN
+F 1 "100k" H 3250 1300 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3380 1250 50  0001 C CNN
+F 3 "~" H 3450 1250 50  0001 C CNN
+	1    3450 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:LM2991 U2
+U 1 1 5F3E621B
+P 4650 1200
+F 0 "U2" H 4525 1225 50  0000 C CNN
+F 1 "LM2991" H 4525 1134 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin6" H 4650 1200 50  0001 C CNN
+F 3 "" H 4650 1200 50  0001 C CNN
+	1    4650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR023
+U 1 1 5F3E6A34
+P 4100 1900
+F 0 "#PWR023" H 4100 1650 50  0001 C CNN
+F 1 "GNDD" H 4104 1745 50  0000 C CNN
+F 2 "" H 4100 1900 50  0001 C CNN
+F 3 "" H 4100 1900 50  0001 C CNN
+	1    4100 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C12
+U 1 1 5F3E762E
+P 3850 1700
+F 0 "C12" H 3735 1654 50  0000 R CNN
+F 1 "10u" H 3735 1745 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3888 1550 50  0001 C CNN
+F 3 "~" H 3850 1700 50  0001 C CNN
+	1    3850 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR022
+U 1 1 5F3E822F
+P 3850 1900
+F 0 "#PWR022" H 3850 1650 50  0001 C CNN
+F 1 "GNDD" H 3854 1745 50  0000 C CNN
+F 2 "" H 3850 1900 50  0001 C CNN
+F 3 "" H 3850 1900 50  0001 C CNN
+	1    3850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1400 3450 1400
+Wire Wire Line
+	4150 1400 4100 1400
+Connection ~ 3450 1400
+Wire Wire Line
+	4150 1500 4100 1500
+Wire Wire Line
+	4100 1500 4100 1400
+Connection ~ 4100 1400
+Wire Wire Line
+	4100 1400 4000 1400
+Wire Wire Line
+	3850 1550 3850 1400
+Connection ~ 3850 1400
+Wire Wire Line
+	3850 1400 3450 1400
+Wire Wire Line
+	3850 1900 3850 1850
+Wire Wire Line
+	4100 1900 4100 1700
+Wire Wire Line
+	4100 1600 4150 1600
+Wire Wire Line
+	4150 1700 4100 1700
+Connection ~ 4100 1700
+Wire Wire Line
+	4100 1700 4100 1600
+$Comp
+L photodiode_adc:R-Device R12
+U 1 1 5F48C934
+P 5000 1550
+F 0 "R12" H 4900 1450 50  0000 R CNN
+F 1 "100k" H 4900 1550 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4930 1550 50  0001 C CNN
+F 3 "~" H 5000 1550 50  0001 C CNN
+	1    5000 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:R-Device R9
+U 1 1 5F48CFC7
+P 5000 1250
+F 0 "R9" H 4900 1150 50  0000 R CNN
+F 1 "32k" H 4900 1250 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4930 1250 50  0001 C CNN
+F 3 "~" H 5000 1250 50  0001 C CNN
+	1    5000 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR04
+U 1 1 5F48D4D4
+P 5000 1050
+F 0 "#PWR04" H 5000 800 50  0001 C CNN
+F 1 "GNDD" H 5004 895 50  0000 C CNN
+F 2 "" H 5000 1050 50  0001 C CNN
+F 3 "" H 5000 1050 50  0001 C CNN
+	1    5000 1050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 1400 5000 1400
+Connection ~ 5000 1400
+Wire Wire Line
+	5000 1100 5000 1050
+Wire Wire Line
+	4900 1700 5000 1700
+$Comp
+L photodiode_adc:-5VA-power #PWR011
+U 1 1 5F4D83E9
+P 5200 1700
+F 0 "#PWR011" H 5200 1800 50  0001 C CNN
+F 1 "-5VA" V 5215 1828 50  0000 L CNN
+F 2 "" H 5200 1700 50  0001 C CNN
+F 3 "" H 5200 1700 50  0001 C CNN
+	1    5200 1700
+	0    1    1    0   
+$EndComp
+Connection ~ 5000 1700
+$Comp
+L photodiode_adc:C-Device C13
+U 1 1 5F51189F
+P 5000 1850
+F 0 "C13" V 5000 2400 50  0000 C CNN
+F 1 "10u" V 5000 2200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5038 1700 50  0001 C CNN
+F 3 "~" H 5000 1850 50  0001 C CNN
+	1    5000 1850
+	0    -1   1    0   
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR024
+U 1 1 5F5130AE
+P 4800 1900
+F 0 "#PWR024" H 4800 1650 50  0001 C CNN
+F 1 "GNDD" H 4804 1745 50  0000 C CNN
+F 2 "" H 4800 1900 50  0001 C CNN
+F 3 "" H 4800 1900 50  0001 C CNN
+	1    4800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1850 5150 1700
+Wire Wire Line
+	5150 1700 5200 1700
+Wire Wire Line
+	5000 1700 5150 1700
+Connection ~ 5150 1700
+Wire Wire Line
+	4850 1850 4800 1850
+Wire Wire Line
+	4800 1850 4800 1900
+NoConn ~ 9600 4800
+NoConn ~ 9600 4900
+NoConn ~ 9600 5000
+NoConn ~ 10600 4100
+NoConn ~ 10000 3700
+NoConn ~ 10600 4300
+NoConn ~ 10600 4500
+NoConn ~ 10600 4700
+NoConn ~ 10600 4800
+NoConn ~ 10600 4900
+NoConn ~ 10600 5000
+NoConn ~ 10600 5100
+NoConn ~ 10600 5200
+$Comp
+L photodiode_adc:C-Device C32
+U 1 1 5F6EC2CB
+P 3400 6750
+F 0 "C32" H 3550 6800 50  0000 L CNN
+F 1 "100n" H 3550 6700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3438 6600 50  0001 C CNN
+F 3 "~" H 3400 6750 50  0001 C CNN
+	1    3400 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C33
+U 1 1 5F706E2D
+P 5350 6900
+F 0 "C33" H 5500 6950 50  0000 L CNN
+F 1 "1u" H 5500 6850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5388 6750 50  0001 C CNN
+F 3 "~" H 5350 6900 50  0001 C CNN
+	1    5350 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C34
+U 1 1 5F707436
+P 5800 6900
+F 0 "C34" H 5950 6950 50  0000 L CNN
+F 1 "100n" H 5950 6850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5838 6750 50  0001 C CNN
+F 3 "~" H 5800 6900 50  0001 C CNN
+	1    5800 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C35
+U 1 1 5F7079B0
+P 6250 6900
+F 0 "C35" H 6400 6950 50  0000 L CNN
+F 1 "100n" H 6400 6850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6288 6750 50  0001 C CNN
+F 3 "~" H 6250 6900 50  0001 C CNN
+	1    6250 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR065
+U 1 1 5F70801D
+P 5350 7100
+F 0 "#PWR065" H 5350 6850 50  0001 C CNN
+F 1 "GNDA" H 5355 6927 50  0000 C CNN
+F 2 "" H 5350 7100 50  0001 C CNN
+F 3 "" H 5350 7100 50  0001 C CNN
+	1    5350 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR066
+U 1 1 5F708DFF
+P 5800 7100
+F 0 "#PWR066" H 5800 6850 50  0001 C CNN
+F 1 "GNDA" H 5805 6927 50  0000 C CNN
+F 2 "" H 5800 7100 50  0001 C CNN
+F 3 "" H 5800 7100 50  0001 C CNN
+	1    5800 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR067
+U 1 1 5F7092F9
+P 6250 7100
+F 0 "#PWR067" H 6250 6850 50  0001 C CNN
+F 1 "GNDA" H 6255 6927 50  0000 C CNN
+F 2 "" H 6250 7100 50  0001 C CNN
+F 3 "" H 6250 7100 50  0001 C CNN
+	1    6250 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR060
+U 1 1 5F70974D
+P 5350 6700
+F 0 "#PWR060" H 5350 6550 50  0001 C CNN
+F 1 "+5VA" H 5365 6873 50  0000 C CNN
+F 2 "" H 5350 6700 50  0001 C CNN
+F 3 "" H 5350 6700 50  0001 C CNN
+	1    5350 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+5VA-power #PWR061
+U 1 1 5F709DDF
+P 5800 6700
+F 0 "#PWR061" H 5800 6550 50  0001 C CNN
+F 1 "+5VA" H 5815 6873 50  0000 C CNN
+F 2 "" H 5800 6700 50  0001 C CNN
+F 3 "" H 5800 6700 50  0001 C CNN
+	1    5800 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR058
+U 1 1 5F709F68
+P 3400 6400
+F 0 "#PWR058" H 3400 6250 50  0001 C CNN
+F 1 "+3.3V" H 3415 6573 50  0000 C CNN
+F 2 "" H 3400 6400 50  0001 C CNN
+F 3 "" H 3400 6400 50  0001 C CNN
+	1    3400 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR063
+U 1 1 5F70AA69
+P 3400 7100
+F 0 "#PWR063" H 3400 6850 50  0001 C CNN
+F 1 "GNDD" H 3404 6945 50  0000 C CNN
+F 2 "" H 3400 7100 50  0001 C CNN
+F 3 "" H 3400 7100 50  0001 C CNN
+	1    3400 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 6400 3400 6600
+Wire Wire Line
+	3400 7100 3400 6900
+Wire Wire Line
+	5350 6700 5350 6750
+Wire Wire Line
+	5350 7100 5350 7050
+Wire Wire Line
+	5800 7100 5800 7050
+Wire Wire Line
+	5800 6750 5800 6700
+Wire Wire Line
+	6200 6700 6250 6700
+Wire Wire Line
+	6250 6700 6250 6750
+Wire Wire Line
+	6250 7100 6250 7050
+Text Label 6200 6700 2    50   ~ 0
+VREF
+Wire Wire Line
+	3850 4150 3850 5050
+Wire Wire Line
+	4100 4650 4100 5450
+$Comp
+L photodiode_adc:C-Device C26
+U 1 1 5F81BA24
+P 4000 5050
+F 0 "C26" V 3950 4650 50  0000 L CNN
+F 1 "1u" V 4050 4650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4038 4900 50  0001 C CNN
+F 3 "~" H 4000 5050 50  0001 C CNN
+	1    4000 5050
+	0    1    1    0   
+$EndComp
+Connection ~ 3850 5050
+Wire Wire Line
+	3850 5050 3850 5450
+$Comp
+L photodiode_adc:C-Device C31
+U 1 1 5F81C33E
+P 4200 5300
+F 0 "C31" H 4700 5250 50  0000 L CNN
+F 1 "1u" H 4700 5350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4238 5150 50  0001 C CNN
+F 3 "~" H 4200 5300 50  0001 C CNN
+	1    4200 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4200 5450 4100 5450
+Connection ~ 4100 5450
+Wire Wire Line
+	4200 5050 4150 5050
+$Comp
+L photodiode_adc:GNDD-power #PWR09
+U 1 1 5F85480F
+P 6750 1400
+F 0 "#PWR09" H 6750 1150 50  0001 C CNN
+F 1 "GNDD" H 6754 1245 50  0000 C CNN
+F 2 "" H 6750 1400 50  0001 C CNN
+F 3 "" H 6750 1400 50  0001 C CNN
+	1    6750 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDD-power #PWR010
+U 1 1 5F854DB2
+P 7350 1400
+F 0 "#PWR010" H 7350 1150 50  0001 C CNN
+F 1 "GNDD" H 7354 1245 50  0000 C CNN
+F 2 "" H 7350 1400 50  0001 C CNN
+F 3 "" H 7350 1400 50  0001 C CNN
+	1    7350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C22
+U 1 1 5F858E1D
+P 6900 4100
+F 0 "C22" H 7250 4150 50  0000 L CNN
+F 1 "1u" H 7400 4150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6938 3950 50  0001 C CNN
+F 3 "~" H 6900 4100 50  0001 C CNN
+	1    6900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C23
+U 1 1 5F858E23
+P 7100 4100
+F 0 "C23" H 7250 4050 50  0000 L CNN
+F 1 "100n" H 7400 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7138 3950 50  0001 C CNN
+F 3 "~" H 7100 4100 50  0001 C CNN
+	1    7100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4250 6900 4300
+Wire Wire Line
+	6900 4300 7000 4300
+Wire Wire Line
+	7100 4300 7100 4250
+Connection ~ 7000 4300
+Wire Wire Line
+	7000 4300 7100 4300
+$Comp
+L photodiode_adc:+5VA-power #PWR035
+U 1 1 5F858E35
+P 7000 3800
+F 0 "#PWR035" H 7000 3650 50  0001 C CNN
+F 1 "+5VA" H 7015 3973 50  0000 C CNN
+F 2 "" H 7000 3800 50  0001 C CNN
+F 3 "" H 7000 3800 50  0001 C CNN
+	1    7000 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3850 7000 3850
+Wire Wire Line
+	7100 3850 7100 3950
+Wire Wire Line
+	6900 3850 6900 3950
+Wire Wire Line
+	7000 3800 7000 3850
+Connection ~ 7000 3850
+Wire Wire Line
+	7000 3850 6900 3850
+$Comp
+L photodiode_adc:C-Device C24
+U 1 1 5F8CEA20
+P 7750 4100
+F 0 "C24" H 8100 4150 50  0000 L CNN
+F 1 "1u" H 8250 4150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7788 3950 50  0001 C CNN
+F 3 "~" H 7750 4100 50  0001 C CNN
+	1    7750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C25
+U 1 1 5F8CEA26
+P 7950 4100
+F 0 "C25" H 8100 4050 50  0000 L CNN
+F 1 "100n" H 8250 4050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7988 3950 50  0001 C CNN
+F 3 "~" H 7950 4100 50  0001 C CNN
+	1    7950 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4250 7750 4300
+Wire Wire Line
+	7750 4300 7850 4300
+Wire Wire Line
+	7950 4300 7950 4250
+Connection ~ 7850 4300
+Wire Wire Line
+	7850 4300 7950 4300
+$Comp
+L photodiode_adc:+5VA-power #PWR036
+U 1 1 5F8CEA32
+P 7850 3800
+F 0 "#PWR036" H 7850 3650 50  0001 C CNN
+F 1 "+5VA" H 7865 3973 50  0000 C CNN
+F 2 "" H 7850 3800 50  0001 C CNN
+F 3 "" H 7850 3800 50  0001 C CNN
+	1    7850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3850 7850 3850
+Wire Wire Line
+	7950 3850 7950 3950
+Wire Wire Line
+	7750 3850 7750 3950
+Wire Wire Line
+	7850 3800 7850 3850
+Connection ~ 7850 3850
+Wire Wire Line
+	7850 3850 7750 3850
+$Comp
+L photodiode_adc:C-Device C27
+U 1 1 5F8ECCB8
+P 6900 5150
+F 0 "C27" H 7250 5200 50  0000 L CNN
+F 1 "1u" H 7400 5200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6938 5000 50  0001 C CNN
+F 3 "~" H 6900 5150 50  0001 C CNN
+	1    6900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C28
+U 1 1 5F8ECCBE
+P 7100 5150
+F 0 "C28" H 7250 5100 50  0000 L CNN
+F 1 "100n" H 7400 5100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7138 5000 50  0001 C CNN
+F 3 "~" H 7100 5150 50  0001 C CNN
+	1    7100 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5300 6900 5350
+Wire Wire Line
+	6900 5350 7000 5350
+Wire Wire Line
+	7100 5350 7100 5300
+Wire Wire Line
+	7000 5400 7000 5350
+Connection ~ 7000 5350
+Wire Wire Line
+	7000 5350 7100 5350
+$Comp
+L photodiode_adc:GNDD-power #PWR049
+U 1 1 5F8ECCD0
+P 7000 5400
+F 0 "#PWR049" H 7000 5150 50  0001 C CNN
+F 1 "GNDD" H 7004 5245 50  0000 C CNN
+F 2 "" H 7000 5400 50  0001 C CNN
+F 3 "" H 7000 5400 50  0001 C CNN
+	1    7000 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4900 7000 4900
+Wire Wire Line
+	7100 4900 7100 5000
+Wire Wire Line
+	6900 4900 6900 5000
+Wire Wire Line
+	7000 4850 7000 4900
+Connection ~ 7000 4900
+Wire Wire Line
+	7000 4900 6900 4900
+$Comp
+L photodiode_adc:C-Device C29
+U 1 1 5F90C96D
+P 7750 5150
+F 0 "C29" H 8100 5200 50  0000 L CNN
+F 1 "100n" H 8250 5200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7788 5000 50  0001 C CNN
+F 3 "~" H 7750 5150 50  0001 C CNN
+	1    7750 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:C-Device C30
+U 1 1 5F90C973
+P 7950 5150
+F 0 "C30" H 8100 5100 50  0000 L CNN
+F 1 "100n" H 8250 5100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7988 5000 50  0001 C CNN
+F 3 "~" H 7950 5150 50  0001 C CNN
+	1    7950 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 5300 7750 5350
+Wire Wire Line
+	7750 5350 7850 5350
+Wire Wire Line
+	7950 5350 7950 5300
+Connection ~ 7850 5350
+Wire Wire Line
+	7850 5350 7950 5350
+$Comp
+L photodiode_adc:+5VA-power #PWR045
+U 1 1 5F90C97F
+P 7950 4850
+F 0 "#PWR045" H 7950 4700 50  0001 C CNN
+F 1 "+5VA" H 7965 5023 50  0000 C CNN
+F 2 "" H 7950 4850 50  0001 C CNN
+F 3 "" H 7950 4850 50  0001 C CNN
+	1    7950 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR039
+U 1 1 5F92CC39
+P 7000 4400
+F 0 "#PWR039" H 7000 4150 50  0001 C CNN
+F 1 "GNDA" H 7005 4227 50  0000 C CNN
+F 2 "" H 7000 4400 50  0001 C CNN
+F 3 "" H 7000 4400 50  0001 C CNN
+	1    7000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR040
+U 1 1 5F92D144
+P 7850 4400
+F 0 "#PWR040" H 7850 4150 50  0001 C CNN
+F 1 "GNDA" H 7855 4227 50  0000 C CNN
+F 2 "" H 7850 4400 50  0001 C CNN
+F 3 "" H 7850 4400 50  0001 C CNN
+	1    7850 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR054
+U 1 1 5F92DDC5
+P 7850 5450
+F 0 "#PWR054" H 7850 5200 50  0001 C CNN
+F 1 "GNDA" H 7855 5277 50  0000 C CNN
+F 2 "" H 7850 5450 50  0001 C CNN
+F 3 "" H 7850 5450 50  0001 C CNN
+	1    7850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:+3.3V-power #PWR043
+U 1 1 5F92EF75
+P 7000 4850
+F 0 "#PWR043" H 7000 4700 50  0001 C CNN
+F 1 "+3.3V" H 7015 5023 50  0000 C CNN
+F 2 "" H 7000 4850 50  0001 C CNN
+F 3 "" H 7000 4850 50  0001 C CNN
+	1    7000 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:-5VA-power #PWR044
+U 1 1 5F92F218
+P 7750 4850
+F 0 "#PWR044" H 7750 4950 50  0001 C CNN
+F 1 "-5VA" H 7765 5023 50  0000 C CNN
+F 2 "" H 7750 4850 50  0001 C CNN
+F 3 "" H 7750 4850 50  0001 C CNN
+	1    7750 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4300 7850 4400
+Wire Wire Line
+	7000 4300 7000 4400
+Wire Wire Line
+	7950 4850 7950 5000
+Wire Wire Line
+	7750 4850 7750 5000
+Wire Wire Line
+	7850 5350 7850 5450
+$Comp
+L photodiode_adc:TestPoint-Connector TP1
+U 1 1 5F9D27AF
+P 4000 1400
+F 0 "TP1" V 4000 1600 50  0000 L CNN
+F 1 "TestPoint" V 4000 1850 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 4200 1400 50  0001 C CNN
+F 3 "~" H 4200 1400 50  0001 C CNN
+	1    4000 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4000 1400
+Wire Wire Line
+	4000 1400 3850 1400
+$Comp
+L photodiode_adc:R-Device R29
+U 1 1 5EE98CBF
+P 2850 7050
+F 0 "R29" V 2950 7050 50  0000 C CNN
+F 1 "0R" V 2750 7050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2780 7050 50  0001 C CNN
+F 3 "~" H 2850 7050 50  0001 C CNN
+	1    2850 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L photodiode_adc:TestPoint-Connector TP8
+U 1 1 5EEBB18F
+P 2250 4250
+F 0 "TP8" V 2250 4450 50  0000 L CNN
+F 1 "TestPoint" V 2250 4700 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 2450 4250 50  0001 C CNN
+F 3 "~" H 2450 4250 50  0001 C CNN
+	1    2250 4250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2250 4250
+$Comp
+L photodiode_adc:GNDD-power #PWR0101
+U 1 1 5EF6F328
+P 7000 5950
+F 0 "#PWR0101" H 7000 5700 50  0001 C CNN
+F 1 "GNDD" H 7004 5795 50  0000 C CNN
+F 2 "" H 7000 5950 50  0001 C CNN
+F 3 "" H 7000 5950 50  0001 C CNN
+	1    7000 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L photodiode_adc:GNDA-power #PWR0102
+U 1 1 5EF6F63F
+P 7200 5950
+F 0 "#PWR0102" H 7200 5700 50  0001 C CNN
+F 1 "GNDA" H 7205 5777 50  0000 C CNN
+F 2 "" H 7200 5950 50  0001 C CNN
+F 3 "" H 7200 5950 50  0001 C CNN
+	1    7200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5950 7000 5850
+Wire Wire Line
+	7000 5850 7200 5850
+Wire Wire Line
+	7200 5850 7200 5950
+$EndSCHEMATC
