@@ -292,8 +292,6 @@ Discarded input sections
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.HAL_I2C_MspDeInit
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.HAL_I2C_Master_Transmit
-                0x0000000000000000      0x220 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.HAL_I2C_Master_Receive
                 0x0000000000000000      0x468 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.HAL_I2C_Slave_Transmit
@@ -404,8 +402,6 @@ Discarded input sections
                 0x0000000000000000       0xe4 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_ITError
                 0x0000000000000000      0x208 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_MasterRequestWrite
-                0x0000000000000000      0x10c photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_MasterRequestRead
                 0x0000000000000000      0x198 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_RequestMemoryWrite
@@ -418,20 +414,10 @@ Discarded input sections
                 0x0000000000000000       0x58 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_DMAAbort
                 0x0000000000000000       0x9a photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_WaitOnFlagUntilTimeout
-                0x0000000000000000       0xa4 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_WaitOnMasterAddressFlagUntilTimeout
-                0x0000000000000000       0xda photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_WaitOnTXEFlagUntilTimeout
-                0x0000000000000000       0x78 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_WaitOnBTFFlagUntilTimeout
-                0x0000000000000000       0x78 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_WaitOnSTOPFlagUntilTimeout
                 0x0000000000000000       0x70 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.I2C_WaitOnRXNEFlagUntilTimeout
                 0x0000000000000000       0x92 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .text.I2C_IsAcknowledgeFailed
-                0x0000000000000000       0x46 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .debug_macro   0x0000000000000000      0xade photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .debug_macro   0x0000000000000000      0x18c photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .debug_macro   0x0000000000000000       0x32 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
@@ -600,8 +586,6 @@ Discarded input sections
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.HAL_SPI_MspDeInit
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .text.HAL_SPI_Transmit
-                0x0000000000000000      0x292 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.HAL_SPI_Receive
                 0x0000000000000000      0x236 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.HAL_SPI_TransmitReceive
@@ -686,10 +670,6 @@ Discarded input sections
                 0x0000000000000000       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.SPI_TxISR_16BIT
                 0x0000000000000000       0x42 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .text.SPI_WaitFlagStateUntilTimeout
-                0x0000000000000000       0xd0 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .text.SPI_CheckFlag_BSY
-                0x0000000000000000       0x3a photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.SPI_CloseRxTx_ISR
                 0x0000000000000000       0xe8 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.SPI_CloseRx_ISR
@@ -953,8 +933,6 @@ Discarded input sections
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.HAL_UART_MspDeInit
                 0x0000000000000000        0xa photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .text.HAL_UART_Transmit
-                0x0000000000000000      0x138 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.HAL_UART_Receive
                 0x0000000000000000      0x152 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.HAL_UART_Transmit_IT
@@ -1025,8 +1003,6 @@ Discarded input sections
                 0x0000000000000000       0x1a photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.UART_DMAError
                 0x0000000000000000       0x92 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .text.UART_WaitOnFlagUntilTimeout
-                0x0000000000000000       0x96 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.UART_EndTxTransfer
                 0x0000000000000000       0x22 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.UART_EndRxTransfer
@@ -1646,8 +1622,6 @@ Discarded input sections
                 0x0000000000000000      0x1bc photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
  .text.HAL_GPIO_ReadPin
                 0x0000000000000000       0x30 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
- .text.HAL_GPIO_TogglePin
-                0x0000000000000000       0x1e photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
  .text.HAL_GPIO_LockPin
                 0x0000000000000000       0x4c photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
  .text.HAL_GPIO_EXTI_IRQHandler
@@ -2298,8 +2272,6 @@ Discarded input sections
                 0x0000000000000000       0x48 photodiode_adc THUMB Debug/stm32f4xx_hal.o
  .text.HAL_GetTickFreq
                 0x0000000000000000        0xc photodiode_adc THUMB Debug/stm32f4xx_hal.o
- .text.HAL_Delay
-                0x0000000000000000       0x44 photodiode_adc THUMB Debug/stm32f4xx_hal.o
  .text.HAL_SuspendTick
                 0x0000000000000000       0x14 photodiode_adc THUMB Debug/stm32f4xx_hal.o
  .text.HAL_ResumeTick
@@ -4837,151 +4809,182 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .init_rodata is too large to fit in FLASH memory segment)
                 0x000000000800038c                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x000000000800038c     0x1c00
+.text           0x000000000800038c     0x28ac
                 0x000000000800038c                __text_start__ = .
  *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x000000000800038c        0x0 linker stubs
  .glue_7t       0x000000000800038c        0x0 linker stubs
- .text.main     0x000000000800038c       0x1c photodiode_adc THUMB Debug/main.o
+ .text.main     0x000000000800038c      0x120 photodiode_adc THUMB Debug/main.o
                 0x000000000800038c                main
  .text.SystemClock_Config
-                0x00000000080003a8       0xcc photodiode_adc THUMB Debug/main.o
-                0x00000000080003a8                SystemClock_Config
+                0x00000000080004ac       0xcc photodiode_adc THUMB Debug/main.o
+                0x00000000080004ac                SystemClock_Config
  .text.MX_I2C1_Init
-                0x0000000008000474       0x5c photodiode_adc THUMB Debug/main.o
+                0x0000000008000578       0x5c photodiode_adc THUMB Debug/main.o
  .text.MX_SPI1_Init
-                0x00000000080004d0       0x6c photodiode_adc THUMB Debug/main.o
+                0x00000000080005d4       0x6c photodiode_adc THUMB Debug/main.o
  .text.MX_USART2_UART_Init
-                0x000000000800053c       0x50 photodiode_adc THUMB Debug/main.o
+                0x0000000008000640       0x50 photodiode_adc THUMB Debug/main.o
  .text.MX_GPIO_Init
-                0x000000000800058c      0x11c photodiode_adc THUMB Debug/main.o
+                0x0000000008000690      0x11c photodiode_adc THUMB Debug/main.o
  .text.Error_Handler
-                0x00000000080006a8        0x4 photodiode_adc THUMB Debug/main.o
-                0x00000000080006a8                Error_Handler
+                0x00000000080007ac        0x4 photodiode_adc THUMB Debug/main.o
+                0x00000000080007ac                Error_Handler
  .text.NMI_Handler
-                0x00000000080006ac        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006ac                NMI_Handler
+                0x00000000080007b0        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007b0                NMI_Handler
  .text.HardFault_Handler
-                0x00000000080006b0        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006b0                HardFault_Handler
+                0x00000000080007b4        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007b4                HardFault_Handler
  .text.MemManage_Handler
-                0x00000000080006b2        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006b2                MemManage_Handler
+                0x00000000080007b6        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007b6                MemManage_Handler
  .text.BusFault_Handler
-                0x00000000080006b4        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006b4                BusFault_Handler
+                0x00000000080007b8        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007b8                BusFault_Handler
  .text.UsageFault_Handler
-                0x00000000080006b6        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006b6                UsageFault_Handler
+                0x00000000080007ba        0x2 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007ba                UsageFault_Handler
  .text.SVC_Handler
-                0x00000000080006b8        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006b8                SVC_Handler
+                0x00000000080007bc        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007bc                SVC_Handler
  .text.DebugMon_Handler
-                0x00000000080006bc        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006bc                DebugMon_Handler
+                0x00000000080007c0        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007c0                DebugMon_Handler
  .text.PendSV_Handler
-                0x00000000080006c0        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006c0                PendSV_Handler
+                0x00000000080007c4        0x4 photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007c4                PendSV_Handler
  .text.SysTick_Handler
-                0x00000000080006c4        0xa photodiode_adc THUMB Debug/stm32f4xx_it.o
-                0x00000000080006c4                SysTick_Handler
- *fill*         0x00000000080006ce        0x2 
+                0x00000000080007c8        0xa photodiode_adc THUMB Debug/stm32f4xx_it.o
+                0x00000000080007c8                SysTick_Handler
+ *fill*         0x00000000080007d2        0x2 
  .text.HAL_MspInit
-                0x00000000080006d0       0x50 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
-                0x00000000080006d0                HAL_MspInit
+                0x00000000080007d4       0x50 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+                0x00000000080007d4                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x0000000008000720       0x8c photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
-                0x0000000008000720                HAL_I2C_MspInit
+                0x0000000008000824       0x8c photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+                0x0000000008000824                HAL_I2C_MspInit
  .text.HAL_SPI_MspInit
-                0x00000000080007ac       0x88 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
-                0x00000000080007ac                HAL_SPI_MspInit
+                0x00000000080008b0       0x88 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+                0x00000000080008b0                HAL_SPI_MspInit
  .text.HAL_UART_MspInit
-                0x0000000008000834       0x88 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
-                0x0000000008000834                HAL_UART_MspInit
+                0x0000000008000938       0x88 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+                0x0000000008000938                HAL_UART_MspInit
  .text.HAL_I2C_Init
-                0x00000000080008bc      0x1c0 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
-                0x00000000080008bc                HAL_I2C_Init
+                0x00000000080009c0      0x1c0 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+                0x00000000080009c0                HAL_I2C_Init
+ .text.HAL_I2C_Master_Transmit
+                0x0000000008000b80      0x220 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+                0x0000000008000b80                HAL_I2C_Master_Transmit
+ .text.I2C_MasterRequestWrite
+                0x0000000008000da0      0x10c photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .text.I2C_WaitOnFlagUntilTimeout
+                0x0000000008000eac       0xa4 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .text.I2C_WaitOnMasterAddressFlagUntilTimeout
+                0x0000000008000f50       0xda photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .text.I2C_WaitOnTXEFlagUntilTimeout
+                0x000000000800102a       0x78 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .text.I2C_WaitOnBTFFlagUntilTimeout
+                0x00000000080010a2       0x78 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .text.I2C_IsAcknowledgeFailed
+                0x000000000800111a       0x46 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
  .text.HAL_SPI_Init
-                0x0000000008000a7c       0xc6 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
-                0x0000000008000a7c                HAL_SPI_Init
+                0x0000000008001160       0xc6 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+                0x0000000008001160                HAL_SPI_Init
+ .text.HAL_SPI_Transmit
+                0x0000000008001226      0x292 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+                0x0000000008001226                HAL_SPI_Transmit
+ .text.SPI_WaitFlagStateUntilTimeout
+                0x00000000080014b8       0xd0 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .text.SPI_CheckFlag_BSY
+                0x0000000008001588       0x3a photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
  .text.HAL_UART_Init
-                0x0000000008000b42       0x98 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
-                0x0000000008000b42                HAL_UART_Init
- *fill*         0x0000000008000bda        0x2 
+                0x00000000080015c2       0x98 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+                0x00000000080015c2                HAL_UART_Init
+ .text.HAL_UART_Transmit
+                0x000000000800165a      0x138 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+                0x000000000800165a                HAL_UART_Transmit
+ .text.UART_WaitOnFlagUntilTimeout
+                0x0000000008001792       0x96 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.UART_SetConfig
-                0x0000000008000bdc      0x438 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+                0x0000000008001828      0x438 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
  .text.HAL_RCC_OscConfig
-                0x0000000008001014      0x484 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x0000000008001014                HAL_RCC_OscConfig
+                0x0000000008001c60      0x484 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x0000000008001c60                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x0000000008001498      0x1c0 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x0000000008001498                HAL_RCC_ClockConfig
+                0x00000000080020e4      0x1c0 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x00000000080020e4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008001658      0x1b8 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x0000000008001658                HAL_RCC_GetSysClockFreq
+                0x00000000080022a4      0x1b8 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x00000000080022a4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x0000000008001810        0xc photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x0000000008001810                HAL_RCC_GetHCLKFreq
+                0x000000000800245c        0xc photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x000000000800245c                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x000000000800181c       0x28 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x000000000800181c                HAL_RCC_GetPCLK1Freq
+                0x0000000008002468       0x28 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x0000000008002468                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x0000000008001844       0x28 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
-                0x0000000008001844                HAL_RCC_GetPCLK2Freq
+                0x0000000008002490       0x28 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+                0x0000000008002490                HAL_RCC_GetPCLK2Freq
  .text.HAL_GPIO_Init
-                0x000000000800186c      0x2fc photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
-                0x000000000800186c                HAL_GPIO_Init
+                0x00000000080024b8      0x2fc photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+                0x00000000080024b8                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x0000000008001b68       0x32 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
-                0x0000000008001b68                HAL_GPIO_WritePin
- *fill*         0x0000000008001b9a        0x2 
+                0x00000000080027b4       0x32 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+                0x00000000080027b4                HAL_GPIO_WritePin
+ .text.HAL_GPIO_TogglePin
+                0x00000000080027e6       0x1e photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+                0x00000000080027e6                HAL_GPIO_TogglePin
  .text.NVIC_SetPriorityGrouping
-                0x0000000008001b9c       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002804       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
  .text.NVIC_GetPriorityGrouping
-                0x0000000008001bdc       0x14 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002844       0x14 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
  .text.NVIC_SetPriority
-                0x0000000008001bf0       0x50 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002858       0x50 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x0000000008001c40       0x58 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x00000000080028a8       0x58 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
  .text.SysTick_Config
-                0x0000000008001c98       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002900       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008001cd8       0x14 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
-                0x0000000008001cd8                HAL_NVIC_SetPriorityGrouping
+                0x0000000008002940       0x14 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002940                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008001cec       0x38 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
-                0x0000000008001cec                HAL_NVIC_SetPriority
+                0x0000000008002954       0x38 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x0000000008002954                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x0000000008001d24       0x16 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
-                0x0000000008001d24                HAL_SYSTICK_Config
- *fill*         0x0000000008001d3a        0x2 
+                0x000000000800298c       0x16 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+                0x000000000800298c                HAL_SYSTICK_Config
+ *fill*         0x00000000080029a2        0x2 
  .text.HAL_Init
-                0x0000000008001d3c       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal.o
-                0x0000000008001d3c                HAL_Init
+                0x00000000080029a4       0x40 photodiode_adc THUMB Debug/stm32f4xx_hal.o
+                0x00000000080029a4                HAL_Init
  .text.HAL_InitTick
-                0x0000000008001d7c       0x60 photodiode_adc THUMB Debug/stm32f4xx_hal.o
-                0x0000000008001d7c                HAL_InitTick
+                0x00000000080029e4       0x60 photodiode_adc THUMB Debug/stm32f4xx_hal.o
+                0x00000000080029e4                HAL_InitTick
  .text.HAL_IncTick
-                0x0000000008001ddc       0x1c photodiode_adc THUMB Debug/stm32f4xx_hal.o
-                0x0000000008001ddc                HAL_IncTick
+                0x0000000008002a44       0x1c photodiode_adc THUMB Debug/stm32f4xx_hal.o
+                0x0000000008002a44                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008001df8        0xc photodiode_adc THUMB Debug/stm32f4xx_hal.o
-                0x0000000008001df8                HAL_GetTick
+                0x0000000008002a60        0xc photodiode_adc THUMB Debug/stm32f4xx_hal.o
+                0x0000000008002a60                HAL_GetTick
+ .text.HAL_Delay
+                0x0000000008002a6c       0x44 photodiode_adc THUMB Debug/stm32f4xx_hal.o
+                0x0000000008002a6c                HAL_Delay
  .text.SystemInit
-                0x0000000008001e04       0x54 photodiode_adc THUMB Debug/system_stm32f4xx.o
-                0x0000000008001e04                SystemInit
+                0x0000000008002ab0       0x54 photodiode_adc THUMB Debug/system_stm32f4xx.o
+                0x0000000008002ab0                SystemInit
  .text.libc.__int64_udivmod
-                0x0000000008001e58       0xce C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.7/lib/libc_v7em_t_le_eabi.a(libc_asm.o)
-                0x0000000008001e58                __aeabi_uldivmod
-                0x0000000008001e58                __int64_udiv
-                0x0000000008001e58                __udivdi3
-                0x0000000008001e58                __int64_udivmod
+                0x0000000008002b04       0xce C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.7/lib/libc_v7em_t_le_eabi.a(libc_asm.o)
+                0x0000000008002b04                __aeabi_uldivmod
+                0x0000000008002b04                __int64_udiv
+                0x0000000008002b04                __udivdi3
+                0x0000000008002b04                __int64_udivmod
  .text.libc.memset
-                0x0000000008001f26       0x66 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.7/lib/libc_v7em_t_le_eabi.a(libc2_asm.o)
-                0x0000000008001f26                memset
-                0x0000000008001f8c                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x0000000000001c00                __text_size__ = SIZEOF (.text)
-                0x0000000008001f8c                __text_load_end__ = __text_end__
+                0x0000000008002bd2       0x66 C:/Program Files/Rowley Associates Limited/CrossWorks for ARM 4.7/lib/libc_v7em_t_le_eabi.a(libc2_asm.o)
+                0x0000000008002bd2                memset
+                0x0000000008002c38                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x00000000000028ac                __text_size__ = SIZEOF (.text)
+                0x0000000008002c38                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -4992,67 +4995,68 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 photodiode_adc THUMB Debug/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .text is too large to fit in FLASH memory segment)
-                0x0000000008001f8c                __dtors_load_start__ = ALIGN (__text_end__, 0x4)
+                0x0000000008002c38                __dtors_load_start__ = ALIGN (__text_end__, 0x4)
 
-.dtors          0x0000000008001f8c        0x0
-                0x0000000008001f8c                __dtors_start__ = .
+.dtors          0x0000000008002c38        0x0
+                0x0000000008002c38                __dtors_start__ = .
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000008001f8c                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x0000000008002c38                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x0000000008001f8c                __dtors_load_end__ = __dtors_end__
+                0x0000000008002c38                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .dtors is too large to fit in FLASH memory segment)
-                0x0000000008001f8c                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x0000000008002c38                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x0000000008001f8c        0x0
-                0x0000000008001f8c                __ctors_start__ = .
+.ctors          0x0000000008002c38        0x0
+                0x0000000008002c38                __ctors_start__ = .
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT_BY_NAME(.init_array.*))
-                0x0000000008001f8c                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x0000000008002c38                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x0000000008001f8c                __ctors_load_end__ = __ctors_end__
+                0x0000000008002c38                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .ctors is too large to fit in FLASH memory segment)
-                0x0000000008001f8c                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x0000000008002c38                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x0000000008001f8c       0x18
-                0x0000000008001f8c                __rodata_start__ = .
+.rodata         0x0000000008002c38       0x28
+                0x0000000008002c38                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000008002c38       0x10 photodiode_adc THUMB Debug/main.o
  .rodata.AHBPrescTable
-                0x0000000008001f8c       0x10 photodiode_adc THUMB Debug/system_stm32f4xx.o
-                0x0000000008001f8c                AHBPrescTable
+                0x0000000008002c48       0x10 photodiode_adc THUMB Debug/system_stm32f4xx.o
+                0x0000000008002c48                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008001f9c        0x8 photodiode_adc THUMB Debug/system_stm32f4xx.o
-                0x0000000008001f9c                APBPrescTable
-                0x0000000008001fa4                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x0000000000000018                __rodata_size__ = SIZEOF (.rodata)
-                0x0000000008001fa4                __rodata_load_end__ = __rodata_end__
+                0x0000000008002c58        0x8 photodiode_adc THUMB Debug/system_stm32f4xx.o
+                0x0000000008002c58                APBPrescTable
+                0x0000000008002c60                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
+                0x0000000000000028                __rodata_size__ = SIZEOF (.rodata)
+                0x0000000008002c60                __rodata_load_end__ = __rodata_end__
 
 .rel.dyn        0x0000000008000000        0x0
  .rel.iplt      0x0000000008000000        0x0 photodiode_adc THUMB Debug/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__rodata_start__ == __rodata_end__) || ((__rodata_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .rodata is too large to fit in FLASH memory segment)
-                0x0000000008001fa4                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
+                0x0000000008002c60                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
 
-.ARM.exidx      0x0000000008001fa4        0x0
-                0x0000000008001fa4                __ARM.exidx_start__ = .
-                0x0000000008001fa4                __exidx_start = __ARM.exidx_start__
+.ARM.exidx      0x0000000008002c60        0x0
+                0x0000000008002c60                __ARM.exidx_start__ = .
+                0x0000000008002c60                __exidx_start = __ARM.exidx_start__
  *(.ARM.exidx .ARM.exidx.*)
-                0x0000000008001fa4                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
+                0x0000000008002c60                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
                 0x0000000000000000                __ARM.exidx_size__ = SIZEOF (.ARM.exidx)
-                0x0000000008001fa4                __exidx_end = __ARM.exidx_end__
-                0x0000000008001fa4                __ARM.exidx_load_end__ = __ARM.exidx_end__
+                0x0000000008002c60                __exidx_end = __ARM.exidx_end__
+                0x0000000008002c60                __ARM.exidx_load_end__ = __ARM.exidx_end__
                 0x0000000000000001                . = ASSERT (((__ARM.exidx_start__ == __ARM.exidx_end__) || ((__ARM.exidx_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .ARM.exidx is too large to fit in FLASH memory segment)
-                0x0000000008001fa4                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
+                0x0000000008002c60                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
 
-.fast           0x0000000020000000        0x0 load address 0x0000000008001fa4
+.fast           0x0000000020000000        0x0 load address 0x0000000008002c60
                 0x0000000020000000                __fast_start__ = .
  *(.fast .fast.*)
                 0x0000000020000000                __fast_end__ = (__fast_start__ + SIZEOF (.fast))
                 0x0000000000000000                __fast_size__ = SIZEOF (.fast)
-                0x0000000008001fa4                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
+                0x0000000008002c60                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
                 0x0000000000000001                . = ASSERT (((__fast_load_start__ == __fast_load_end__) || ((__fast_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .fast is too large to fit in FLASH memory segment)
 
 .fast_run       0x0000000020000000        0x0
@@ -5062,9 +5066,9 @@ Linker script and memory map
                 0x0000000000000000                __fast_run_size__ = SIZEOF (.fast_run)
                 0x0000000020000000                __fast_run_load_end__ = __fast_run_end__
                 0x0000000000000001                . = ASSERT (((__fast_run_start__ == __fast_run_end__) || ((__fast_run_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .fast_run is too large to fit in RAM memory segment)
-                0x0000000008001fa4                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
+                0x0000000008002c60                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
 
-.data           0x0000000020000000        0xc load address 0x0000000008001fa4
+.data           0x0000000020000000        0xc load address 0x0000000008002c60
                 0x0000000020000000                __data_start__ = .
  *(.data .data.* .gnu.linkonce.d.*)
  .data.uwTickPrio
@@ -5079,13 +5083,13 @@ Linker script and memory map
                 0x0000000020000008                SystemCoreClock
                 0x000000002000000c                __data_end__ = (__data_start__ + SIZEOF (.data))
                 0x000000000000000c                __data_size__ = SIZEOF (.data)
-                0x0000000008001fb0                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
+                0x0000000008002c6c                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
 
 .igot.plt       0x0000000100000000        0x0
  .igot.plt      0x0000000100000000        0x0 photodiode_adc THUMB Debug/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__data_load_start__ == __data_load_end__) || ((__data_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .data is too large to fit in FLASH memory segment)
 
-.data_run       0x0000000020000000        0xc load address 0x0000000008001fa4
+.data_run       0x0000000020000000        0xc load address 0x0000000008002c60
                 0x0000000020000000                __data_run_start__ = .
                 0x000000002000000c                . = MAX ((__data_run_start__ + SIZEOF (.data)), .)
  *fill*         0x0000000020000000        0xc 
@@ -5120,16 +5124,16 @@ Linker script and memory map
                 0x0000000000000000                __tbss_size__ = SIZEOF (.tbss)
                 0x00000000200000fc                __tbss_load_end__ = __tbss_end__
                 0x0000000000000001                . = ASSERT (((__tbss_start__ == __tbss_end__) || ((__tbss_end__ - __RAM_segment_start__) <= __RAM_segment_size__)), error: .tbss is too large to fit in RAM memory segment)
-                0x0000000008001fb0                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
+                0x0000000008002c6c                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
 
-.tdata          0x00000000200000fc        0x0 load address 0x0000000008001fb0
+.tdata          0x00000000200000fc        0x0 load address 0x0000000008002c6c
                 0x00000000200000fc                __tdata_start__ = .
  *(.tdata .tdata.*)
                 0x00000000200000fc                __tdata_end__ = (__tdata_start__ + SIZEOF (.tdata))
                 0x0000000000000000                __tdata_size__ = SIZEOF (.tdata)
-                0x0000000008001fb0                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
-                0x0000000008001fb0                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
-                0x0000000000001fb0                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
+                0x0000000008002c6c                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
+                0x0000000008002c6c                __FLASH_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
+                0x0000000000002c6c                __FLASH_segment_used_size__ = (__FLASH_segment_used_end__ - __FLASH_segment_start__)
                 0x0000000000000001                . = ASSERT (((__tdata_load_start__ == __tdata_load_end__) || ((__tdata_load_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__)), error: .tdata is too large to fit in FLASH memory segment)
 
 .tdata_run      0x00000000200000fc        0x0
@@ -5261,50 +5265,50 @@ OUTPUT(photodiode_adc THUMB Debug/photodiode_adc.elf elf32-littlearm)
  .comment       0x0000000000000047       0x48 photodiode_adc THUMB Debug/stm32f4xx_hal.o
  .comment       0x0000000000000047       0x48 photodiode_adc THUMB Debug/system_stm32f4xx.o
 
-.debug_line     0x0000000000000000     0x98f2
+.debug_line     0x0000000000000000     0x9960
  .debug_line    0x0000000000000000      0x200 photodiode_adc THUMB Debug/thumb_crt0.o
  .debug_line    0x0000000000000200      0x113 photodiode_adc THUMB Debug/STM32_Startup.o
- .debug_line    0x0000000000000313      0x584 photodiode_adc THUMB Debug/main.o
- .debug_line    0x0000000000000897      0x4dc photodiode_adc THUMB Debug/stm32f4xx_it.o
- .debug_line    0x0000000000000d73      0x508 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
- .debug_line    0x000000000000127b     0x31a7 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .debug_line    0x0000000000004422     0x1821 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .debug_line    0x0000000000005c43     0x14c0 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .debug_line    0x0000000000007103      0xa27 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
- .debug_line    0x0000000000007b2a      0x840 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
- .debug_line    0x000000000000836a      0x9db photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
- .debug_line    0x0000000000008d45      0x6ee photodiode_adc THUMB Debug/stm32f4xx_hal.o
- .debug_line    0x0000000000009433      0x4bf photodiode_adc THUMB Debug/system_stm32f4xx.o
+ .debug_line    0x0000000000000313      0x5f2 photodiode_adc THUMB Debug/main.o
+ .debug_line    0x0000000000000905      0x4dc photodiode_adc THUMB Debug/stm32f4xx_it.o
+ .debug_line    0x0000000000000de1      0x508 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+ .debug_line    0x00000000000012e9     0x31a7 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .debug_line    0x0000000000004490     0x1821 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .debug_line    0x0000000000005cb1     0x14c0 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+ .debug_line    0x0000000000007171      0xa27 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000000000007b98      0x840 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+ .debug_line    0x00000000000083d8      0x9db photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+ .debug_line    0x0000000000008db3      0x6ee photodiode_adc THUMB Debug/stm32f4xx_hal.o
+ .debug_line    0x00000000000094a1      0x4bf photodiode_adc THUMB Debug/system_stm32f4xx.o
 
-.debug_info     0x0000000000000000     0xd72e
+.debug_info     0x0000000000000000     0xd789
  .debug_info    0x0000000000000000       0x22 photodiode_adc THUMB Debug/thumb_crt0.o
  .debug_info    0x0000000000000022       0x26 photodiode_adc THUMB Debug/STM32_Startup.o
- .debug_info    0x0000000000000048     0x1690 photodiode_adc THUMB Debug/main.o
- .debug_info    0x00000000000016d8      0x72b photodiode_adc THUMB Debug/stm32f4xx_it.o
- .debug_info    0x0000000000001e03     0x1561 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000003364     0x27a6 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .debug_info    0x0000000000005b0a     0x1b6e photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .debug_info    0x0000000000007678     0x1823 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .debug_info    0x0000000000008e9b      0xea9 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
- .debug_info    0x0000000000009d44      0xd5a photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
- .debug_info    0x000000000000aa9e     0x1348 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
- .debug_info    0x000000000000bde6      0xe6a photodiode_adc THUMB Debug/stm32f4xx_hal.o
- .debug_info    0x000000000000cc50      0xade photodiode_adc THUMB Debug/system_stm32f4xx.o
+ .debug_info    0x0000000000000048     0x16eb photodiode_adc THUMB Debug/main.o
+ .debug_info    0x0000000000001733      0x72b photodiode_adc THUMB Debug/stm32f4xx_it.o
+ .debug_info    0x0000000000001e5e     0x1561 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+ .debug_info    0x00000000000033bf     0x27a6 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .debug_info    0x0000000000005b65     0x1b6e photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .debug_info    0x00000000000076d3     0x1823 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+ .debug_info    0x0000000000008ef6      0xea9 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+ .debug_info    0x0000000000009d9f      0xd5a photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+ .debug_info    0x000000000000aaf9     0x1348 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+ .debug_info    0x000000000000be41      0xe6a photodiode_adc THUMB Debug/stm32f4xx_hal.o
+ .debug_info    0x000000000000ccab      0xade photodiode_adc THUMB Debug/system_stm32f4xx.o
 
-.debug_abbrev   0x0000000000000000     0x1a36
+.debug_abbrev   0x0000000000000000     0x1a27
  .debug_abbrev  0x0000000000000000       0x12 photodiode_adc THUMB Debug/thumb_crt0.o
  .debug_abbrev  0x0000000000000012       0x14 photodiode_adc THUMB Debug/STM32_Startup.o
- .debug_abbrev  0x0000000000000026      0x252 photodiode_adc THUMB Debug/main.o
- .debug_abbrev  0x0000000000000278      0x144 photodiode_adc THUMB Debug/stm32f4xx_it.o
- .debug_abbrev  0x00000000000003bc      0x217 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
- .debug_abbrev  0x00000000000005d3      0x29f photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .debug_abbrev  0x0000000000000872      0x2ac photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .debug_abbrev  0x0000000000000b1e      0x2bf photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .debug_abbrev  0x0000000000000ddd      0x2ba photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
- .debug_abbrev  0x0000000000001097      0x236 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
- .debug_abbrev  0x00000000000012cd      0x364 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
- .debug_abbrev  0x0000000000001631      0x26e photodiode_adc THUMB Debug/stm32f4xx_hal.o
- .debug_abbrev  0x000000000000189f      0x197 photodiode_adc THUMB Debug/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000026      0x243 photodiode_adc THUMB Debug/main.o
+ .debug_abbrev  0x0000000000000269      0x144 photodiode_adc THUMB Debug/stm32f4xx_it.o
+ .debug_abbrev  0x00000000000003ad      0x217 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x00000000000005c4      0x29f photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .debug_abbrev  0x0000000000000863      0x2ac photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .debug_abbrev  0x0000000000000b0f      0x2bf photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+ .debug_abbrev  0x0000000000000dce      0x2ba photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+ .debug_abbrev  0x0000000000001088      0x236 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+ .debug_abbrev  0x00000000000012be      0x364 photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+ .debug_abbrev  0x0000000000001622      0x26e photodiode_adc THUMB Debug/stm32f4xx_hal.o
+ .debug_abbrev  0x0000000000001890      0x197 photodiode_adc THUMB Debug/system_stm32f4xx.o
 
 .debug_aranges  0x0000000000000000      0xaa8
  .debug_aranges
@@ -5334,31 +5338,31 @@ OUTPUT(photodiode_adc THUMB Debug/photodiode_adc.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000a80       0x28 photodiode_adc THUMB Debug/system_stm32f4xx.o
 
-.debug_str      0x0000000000000000    0x7f6cc
+.debug_str      0x0000000000000000    0x7f6d8
  .debug_str     0x0000000000000000       0xad photodiode_adc THUMB Debug/thumb_crt0.o
  .debug_str     0x00000000000000ad       0x74 photodiode_adc THUMB Debug/STM32_Startup.o
                                          0xcb (size before relaxing)
- .debug_str     0x0000000000000121    0x7cbb4 photodiode_adc THUMB Debug/main.o
-                                      0x7ce5a (size before relaxing)
- .debug_str     0x000000000007ccd5       0xf6 photodiode_adc THUMB Debug/stm32f4xx_it.o
+ .debug_str     0x0000000000000121    0x7cbc0 photodiode_adc THUMB Debug/main.o
+                                      0x7ce66 (size before relaxing)
+ .debug_str     0x000000000007cce1       0xf6 photodiode_adc THUMB Debug/stm32f4xx_it.o
                                       0x7c3db (size before relaxing)
- .debug_str     0x000000000007cdcb       0xdd photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+ .debug_str     0x000000000007cdd7       0xdd photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
                                       0x7cd1b (size before relaxing)
- .debug_str     0x000000000007cea8      0xa9b photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .debug_str     0x000000000007ceb4      0xa9b photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
                                       0x7d0f0 (size before relaxing)
- .debug_str     0x000000000007d943      0x517 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .debug_str     0x000000000007d94f      0x517 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
                                       0x7cae3 (size before relaxing)
- .debug_str     0x000000000007de5a      0x546 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+ .debug_str     0x000000000007de66      0x546 photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
                                       0x7cb18 (size before relaxing)
- .debug_str     0x000000000007e3a0      0x2b3 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+ .debug_str     0x000000000007e3ac      0x2b3 photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
                                       0x7c6e3 (size before relaxing)
- .debug_str     0x000000000007e653      0x24a photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+ .debug_str     0x000000000007e65f      0x24a photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
                                       0x7c54b (size before relaxing)
- .debug_str     0x000000000007e89d      0x7cb photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+ .debug_str     0x000000000007e8a9      0x7cb photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
                                       0x7ca4f (size before relaxing)
- .debug_str     0x000000000007f068      0x5cc photodiode_adc THUMB Debug/stm32f4xx_hal.o
+ .debug_str     0x000000000007f074      0x5cc photodiode_adc THUMB Debug/stm32f4xx_hal.o
                                       0x7ccda (size before relaxing)
- .debug_str     0x000000000007f634       0x98 photodiode_adc THUMB Debug/system_stm32f4xx.o
+ .debug_str     0x000000000007f640       0x98 photodiode_adc THUMB Debug/system_stm32f4xx.o
                                       0x7c312 (size before relaxing)
 
 .debug_ranges   0x0000000000000000      0x9d0
@@ -5375,18 +5379,18 @@ OUTPUT(photodiode_adc THUMB Debug/photodiode_adc.elf elf32-littlearm)
  .debug_ranges  0x00000000000008e8       0xd0 photodiode_adc THUMB Debug/stm32f4xx_hal.o
  .debug_ranges  0x00000000000009b8       0x18 photodiode_adc THUMB Debug/system_stm32f4xx.o
 
-.debug_frame    0x0000000000000000     0x2648
- .debug_frame   0x0000000000000000       0xe0 photodiode_adc THUMB Debug/main.o
- .debug_frame   0x00000000000000e0       0xac photodiode_adc THUMB Debug/stm32f4xx_it.o
- .debug_frame   0x000000000000018c      0x128 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
- .debug_frame   0x00000000000002b4      0xa98 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
- .debug_frame   0x0000000000000d4c      0x7f0 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
- .debug_frame   0x000000000000153c      0x7ec photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
- .debug_frame   0x0000000000001d28      0x19c photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
- .debug_frame   0x0000000000001ec4      0x118 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
- .debug_frame   0x0000000000001fdc      0x41c photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
- .debug_frame   0x00000000000023f8      0x210 photodiode_adc THUMB Debug/stm32f4xx_hal.o
- .debug_frame   0x0000000000002608       0x40 photodiode_adc THUMB Debug/system_stm32f4xx.o
+.debug_frame    0x0000000000000000     0x264c
+ .debug_frame   0x0000000000000000       0xe4 photodiode_adc THUMB Debug/main.o
+ .debug_frame   0x00000000000000e4       0xac photodiode_adc THUMB Debug/stm32f4xx_it.o
+ .debug_frame   0x0000000000000190      0x128 photodiode_adc THUMB Debug/stm32f4xx_hal_msp.o
+ .debug_frame   0x00000000000002b8      0xa98 photodiode_adc THUMB Debug/stm32f4xx_hal_i2c.o
+ .debug_frame   0x0000000000000d50      0x7f0 photodiode_adc THUMB Debug/stm32f4xx_hal_spi.o
+ .debug_frame   0x0000000000001540      0x7ec photodiode_adc THUMB Debug/stm32f4xx_hal_uart.o
+ .debug_frame   0x0000000000001d2c      0x19c photodiode_adc THUMB Debug/stm32f4xx_hal_rcc.o
+ .debug_frame   0x0000000000001ec8      0x118 photodiode_adc THUMB Debug/stm32f4xx_hal_gpio.o
+ .debug_frame   0x0000000000001fe0      0x41c photodiode_adc THUMB Debug/stm32f4xx_hal_cortex.o
+ .debug_frame   0x00000000000023fc      0x210 photodiode_adc THUMB Debug/stm32f4xx_hal.o
+ .debug_frame   0x000000000000260c       0x40 photodiode_adc THUMB Debug/system_stm32f4xx.o
 
 .debug_pubnames
                 0x0000000000000000     0x2d0e
