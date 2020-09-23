@@ -9,6 +9,8 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
+uint8_t Read_AD7768_Register(uint8_t address);
+void Write_AD7768_Register(uint8_t address, uint8_t value);
 
 int main(void)
 {
@@ -46,20 +48,32 @@ int main(void)
   buf[1] = 0x05;
   HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
 
+  uint8_t counter = 0;
   while (1)
   {
 
     HAL_GPIO_TogglePin(GPIOA, MODE0_Pin);
-    HAL_UART_Transmit(&huart2, (uint8_t*)"Test", sizeof("Test"), 50);
 
-    uint8_t buf[8];
-    buf[0] = 0x42;
-    buf[1] = 0x4A;
+    //Write_AD7768_Register(0x15, 0b00000000);//set ADC to 16bit mode
+
+    uint8_t address = 0x2C;
+    uint8_t tx_buf[4];
+    uint8_t rx_buf[4];
+    tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
+    tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
+    tx_buf[2] = 0x00;
+    tx_buf[3] = 0x00;
     HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_Transmit(&hspi1, buf, 1, 50);
+    HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 2, 50);
     HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
 
-    HAL_Delay(10);
+    //Scratchpad Echo Example
+    /*Write_AD7768_Register(0x0A, counter);
+    counter ++;
+    uint8_t scratchpad = Read_AD7768_Register(0x0A);
+    HAL_UART_Transmit(&huart2, &scratchpad, 1, 50);*/
+
+    HAL_Delay(100);
   }
 }
 
@@ -202,4 +216,24 @@ static void MX_GPIO_Init(void)
 
 void Error_Handler() {
 
+}
+
+uint8_t Read_AD7768_Register(uint8_t address){
+    uint8_t tx_buf[2];
+    uint8_t rx_buf[2];
+    tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
+    tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
+    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
+    HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 1, 50);
+    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
+    return rx_buf[0];
+}
+
+void Write_AD7768_Register(uint8_t address, uint8_t value){
+    uint8_t tx_buf[2];
+    tx_buf[0] = value; //second byte to be transmitted, irrelevant in case of write
+    tx_buf[1] = (0 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
+    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
+    HAL_SPI_Transmit(&hspi1, tx_buf, 1, 50);
+    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
 }
