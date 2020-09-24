@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 I2C_HandleTypeDef hi2c1;
 SPI_HandleTypeDef hspi1;
@@ -11,6 +12,29 @@ static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 uint8_t Read_AD7768_Register(uint8_t address);
 void Write_AD7768_Register(uint8_t address, uint8_t value);
+void Set_Si514_Frequency(uint8_t *XORegisters);
+
+uint8_t new_ADC_Data_Flag = 0;
+
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI2_TSC_IRQn 0 */
+
+  /* USER CODE END EXTI2_TSC_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_8);
+  /* USER CODE BEGIN EXTI2_TSC_IRQn 1 */
+
+  /* USER CODE END EXTI2_TSC_IRQn 1 */
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if ( GPIO_Pin == GPIO_PIN_8)
+    {
+        //HAL_UART_Transmit(&huart2, "LOL", sizeof("LOL"), 50);
+        new_ADC_Data_Flag = 1;
+    }
+}
 
 int main(void)
 {
@@ -22,50 +46,67 @@ int main(void)
   MX_I2C1_Init();
   MX_SPI1_Init();
 
-  /*SET Si514 on I2C1 to the correct frequency*/
-  //uint8_t XORegisters[8] = {0x22, 0xDF, 0x1F, 0x59, 0x25, 0x08, 0x50, 0x23}; //614.4 kHz
+  /*set Si514 to the correct frequency*/
+  uint8_t XORegisters[8] = {0x22, 0xDF, 0x1F, 0x59, 0x25, 0x08, 0x50, 0x23}; //614.4 kHz
   //uint8_t Registers[8] = {0x23, 0x73, 0xD0, 0x96, 0x2E, 0x26, 0x64, 0x01}; //7.12 MHz
-  uint8_t XORegisters[8] = {0x22, 0x6F, 0xB8, 0x80, 0x24, 0x08, 0x64, 0x33}; //300 kHz
-  
-  uint8_t buf[8];
-  //Deassert OE bit
-  buf[0] = 0x84; //Register Address
-  buf[1] = 0x00; //Register Value
-  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
+  //uint8_t XORegisters[8] = {0x22, 0x6F, 0xB8, 0x80, 0x24, 0x08, 0x64, 0x33}; //300 kHz
+  Set_Si514_Frequency(XORegisters);
 
-  //Write the new frequency configuration (LP1 and LP2)
-  buf[0] = 0x00;
-  buf[1] = XORegisters[0];
-  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
+  /*Configure AD7768 for continuous one shot conversion Mode at 300 Sp/s*/
+//Write_AD7768_Register(0x14, 0b00000001); //INTERFACE FORMAT CONTROL REGISTER: EN_CONT_READ(enables continuous read mode)
+  Write_AD7768_Register(0x15, 0b00110011); //POWER AND CLOCK CONTROL REGISTER: MCLK_DIV(f_mod=MCLK/2), PWRMODE(fast power mode)
+  Write_AD7768_Register(0x18, 0b00000000); //CONVERSION SOURCE SELECT AND MODE CONTROL REGISTER: CONV_MODE(continuous one shot mode)
+  Write_AD7768_Register(0x19, 0b00000101); //DIGITAL FILTER AND DECIMATION CONTROL REGISTER: DEC_RATE(decimate ×1024)
+Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
 
-  //Write the new frequency configuration (M, HS_DIV, HS_DIV)
-  buf[0] = 0x05;
-  for(int i = 1; i < 8; i ++){buf[i] = XORegisters[i];}
-  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 8, 50);
-  
-  //Assert FCAL register bit (This bit is self-clearing) and assert OE register bit
-  buf[0] = 0x84;
-  buf[1] = 0x05;
-  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
+  uint32_t averaged = 0;
+  uint32_t counter = 0;
 
-  uint8_t counter = 0;
   while (1)
   {
 
-    HAL_GPIO_TogglePin(GPIOA, MODE0_Pin);
+    //Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
 
-    //Write_AD7768_Register(0x15, 0b00000000);//set ADC to 16bit mode
+    if(new_ADC_Data_Flag == 1){
+    //HAL_Delay(100);
+      new_ADC_Data_Flag = 0;
+      uint8_t address = 0x2C;
+      uint8_t tx_buf[4];
+      uint8_t rx_buf[4];
+      tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
+      tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
+      tx_buf[2] = 0x00; //4th
+      tx_buf[3] = 0x00; //3rd
+      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
+      HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 2, 50);
+      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
+      uint32_t result = (rx_buf[0] << 16) | (rx_buf[3] << 8) | (rx_buf[2] << 0);
+      averaged += result;
+      counter ++;
+      uint8_t buffer[4];
+      buffer[0] = result >> 24;
+      buffer[1] = result >> 16;
+      buffer[2] = result >> 8;
+      buffer[3] = result >> 0;
+      //HAL_UART_Transmit(&huart2, buffer, 4, 50);
+    }
 
-    uint8_t address = 0x2C;
-    uint8_t tx_buf[4];
-    uint8_t rx_buf[4];
-    tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
-    tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
-    tx_buf[2] = 0x00;
-    tx_buf[3] = 0x00;
-    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 2, 50);
-    HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
+    if(counter == 255){
+      counter = 0;
+      uint8_t buffer[4];
+      buffer[0] = averaged >> 24;
+      buffer[1] = averaged >> 16;
+      buffer[2] = averaged >> 8;
+      buffer[3] = averaged >> 0;
+      HAL_UART_Transmit(&huart2, buffer, 4, 50);
+      averaged = 0;
+    }
+
+
+
+      //HAL_UART_Transmit(&huart2, &rx_buf[0], 1, 50);
+      //HAL_UART_Transmit(&huart2, &rx_buf[3], 1, 50);
+      //HAL_UART_Transmit(&huart2, &rx_buf[2], 1, 50);
 
     //Scratchpad Echo Example
     /*Write_AD7768_Register(0x0A, counter);
@@ -73,7 +114,6 @@ int main(void)
     uint8_t scratchpad = Read_AD7768_Register(0x0A);
     HAL_UART_Transmit(&huart2, &scratchpad, 1, 50);*/
 
-    HAL_Delay(100);
   }
 }
 
@@ -205,12 +245,27 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(MODE0_GPIO_Port, &GPIO_InitStruct);
 
+
+
   /*Configure GPIO pins : MODE1_Pin MODE3_Pin MODE2_Pin CS_Pin */
   GPIO_InitStruct.Pin = MODE1_Pin|MODE3_Pin|MODE2_Pin|CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  
+  /**/
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0); // <--- This and
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn); // <--- this are what were missing for you.
 
 }
 
@@ -236,4 +291,27 @@ void Write_AD7768_Register(uint8_t address, uint8_t value){
     HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
     HAL_SPI_Transmit(&hspi1, tx_buf, 1, 50);
     HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
+}
+
+void Set_Si514_Frequency(uint8_t XORegisters[]){
+  uint8_t buf[8];
+  //Deassert OE bit
+  buf[0] = 0x84; //Register Address
+  buf[1] = 0x00; //Register Value
+  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
+
+  //Write the new frequency configuration (LP1 and LP2)
+  buf[0] = 0x00;
+  buf[1] = XORegisters[0];
+  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
+
+  //Write the new frequency configuration (M, HS_DIV, HS_DIV)
+  buf[0] = 0x05;
+  for(int i = 1; i < 8; i ++){buf[i] = XORegisters[i];}
+  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 8, 50);
+  
+  //Assert FCAL register bit (This bit is self-clearing) and assert OE register bit
+  buf[0] = 0x84;
+  buf[1] = 0x05;
+  HAL_I2C_Master_Transmit(&hi2c1, 0x55 << 1, buf, 2, 50);
 }

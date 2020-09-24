@@ -58,11 +58,17 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="15" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/main.c" selected="1" top="48" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/stm32f4xx_hal_msp.c" selected="0" top="18" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="574" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" selected="0" top="559" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="39" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/main.c" selected="1" top="24" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/stm32f4xx_hal_msp.c" selected="0" top="123" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="102" y="574" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c" selected="0" top="643" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="403" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" selected="0" top="388" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="216" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h" selected="0" top="201" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2110" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" selected="0" top="2095" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="101" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/stm32f4xx_it.c" selected="0" top="86" codecName=""/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Inc/main.h" selected="0" top="57" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="180" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" selected="0" top="165" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="112" useTextEdit="1" openedFrom="C:/Users/Admin/Desktop/vis-nir_spectrometer_detection_unit/stm32/Src/main.c" useBinaryEdit="0" left="0" path="../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h" selected="0" top="94" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="439" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" selected="0" top="424" codecName=""/>
  </Files>
  <ARMCrossStudioWindow activeProject="photodiode_adc" fileDialogDefaultFilter="*.c" autoConnectTarget="ST-LINK/V2" buildConfiguration="THUMB Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="266111"/>
 </session>
