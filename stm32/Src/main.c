@@ -10,34 +10,32 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
+
 uint8_t Read_AD7768_Register(uint8_t address);
+uint32_t Read_AD7768_ResultRegister();
 void Write_AD7768_Register(uint8_t address, uint8_t value);
 void Set_Si514_Frequency(uint8_t *XORegisters);
 
+static uint8_t average_mode = 1; //1 to average 256 samples before transmission
 uint8_t new_ADC_Data_Flag = 0;
 
+//Register GPIO Interrupt to Interrupt Line
 void EXTI9_5_IRQHandler(void)
 {
-  /* USER CODE BEGIN EXTI2_TSC_IRQn 0 */
-
-  /* USER CODE END EXTI2_TSC_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_8);
-  /* USER CODE BEGIN EXTI2_TSC_IRQn 1 */
-
-  /* USER CODE END EXTI2_TSC_IRQn 1 */
 }
 
+//Interrupt Function for PA8
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     if ( GPIO_Pin == GPIO_PIN_8)
     {
-        //HAL_UART_Transmit(&huart2, "LOL", sizeof("LOL"), 50);
         new_ADC_Data_Flag = 1;
     }
 }
 
 int main(void)
-{
+ {
   HAL_Init();
   SystemClock_Config();
 
@@ -47,7 +45,7 @@ int main(void)
   MX_SPI1_Init();
 
   /*set Si514 to the correct frequency*/
-  uint8_t XORegisters[8] = {0x22, 0xDF, 0x1F, 0x59, 0x25, 0x08, 0x50, 0x23}; //614.4 kHz
+  uint8_t XORegisters[8] = {0x22, 0xDF, 0x1F, 0x59, 0x25, 0x08, 0x50, 0x23}; //614.4 kHz > 300 Sp/s
   //uint8_t Registers[8] = {0x23, 0x73, 0xD0, 0x96, 0x2E, 0x26, 0x64, 0x01}; //7.12 MHz
   //uint8_t XORegisters[8] = {0x22, 0x6F, 0xB8, 0x80, 0x24, 0x08, 0x64, 0x33}; //300 kHz
   Set_Si514_Frequency(XORegisters);
@@ -57,41 +55,34 @@ int main(void)
   Write_AD7768_Register(0x15, 0b00110011); //POWER AND CLOCK CONTROL REGISTER: MCLK_DIV(f_mod=MCLK/2), PWRMODE(fast power mode)
   Write_AD7768_Register(0x18, 0b00000000); //CONVERSION SOURCE SELECT AND MODE CONTROL REGISTER: CONV_MODE(continuous one shot mode)
   Write_AD7768_Register(0x19, 0b00000101); //DIGITAL FILTER AND DECIMATION CONTROL REGISTER: DEC_RATE(decimate ×1024)
-Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
+  Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
 
   uint32_t averaged = 0;
   uint32_t counter = 0;
 
   while (1)
   {
-
-    //Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
-
+    //when new conversion is ready, readback result
     if(new_ADC_Data_Flag == 1){
-    //HAL_Delay(100);
       new_ADC_Data_Flag = 0;
-      uint8_t address = 0x2C;
-      uint8_t tx_buf[4];
-      uint8_t rx_buf[4];
-      tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
-      tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
-      tx_buf[2] = 0x00; //4th
-      tx_buf[3] = 0x00; //3rd
-      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
-      HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 2, 50);
-      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
-      uint32_t result = (rx_buf[0] << 16) | (rx_buf[3] << 8) | (rx_buf[2] << 0);
+
+      uint32_t result = Read_AD7768_ResultRegister();
       averaged += result;
       counter ++;
-      uint8_t buffer[4];
-      buffer[0] = result >> 24;
-      buffer[1] = result >> 16;
-      buffer[2] = result >> 8;
-      buffer[3] = result >> 0;
-      //HAL_UART_Transmit(&huart2, buffer, 4, 50);
+      
+      //output result if wanted
+      if(!average_mode){
+        uint8_t buffer[4];
+        buffer[0] = result >> 24;
+        buffer[1] = result >> 16;
+        buffer[2] = result >> 8;
+        buffer[3] = result >> 0;
+        HAL_UART_Transmit(&huart2, buffer, 4, 50);
+      }
     }
-
-    if(counter == 255){
+    
+    //evaluate averaging, print if neccessary
+    if(counter == 255 && average_mode){
       counter = 0;
       uint8_t buffer[4];
       buffer[0] = averaged >> 24;
@@ -101,19 +92,6 @@ Write_AD7768_Register(0x1D, 0b00000000); //Trigger Conversion
       HAL_UART_Transmit(&huart2, buffer, 4, 50);
       averaged = 0;
     }
-
-
-
-      //HAL_UART_Transmit(&huart2, &rx_buf[0], 1, 50);
-      //HAL_UART_Transmit(&huart2, &rx_buf[3], 1, 50);
-      //HAL_UART_Transmit(&huart2, &rx_buf[2], 1, 50);
-
-    //Scratchpad Echo Example
-    /*Write_AD7768_Register(0x0A, counter);
-    counter ++;
-    uint8_t scratchpad = Read_AD7768_Register(0x0A);
-    HAL_UART_Transmit(&huart2, &scratchpad, 1, 50);*/
-
   }
 }
 
@@ -264,8 +242,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0); // <--- This and
-  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn); // <--- this are what were missing for you.
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 }
 
@@ -282,6 +260,20 @@ uint8_t Read_AD7768_Register(uint8_t address){
     HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 1, 50);
     HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
     return rx_buf[0];
+}
+
+uint32_t Read_AD7768_ResultRegister(){
+      uint8_t address = 0x2C;
+      uint8_t tx_buf[4];
+      uint8_t rx_buf[4];
+      tx_buf[0] = 0x00; //second byte to be transmitted, irrelevant in case of write
+      tx_buf[1] = (1 << 6) | (address & ~(0b11 << 6)); //first byte to be transmitted, address is expected to be right-aligned
+      tx_buf[2] = 0x00; //4th
+      tx_buf[3] = 0x00; //3rd
+      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_RESET);
+      HAL_SPI_TransmitReceive(&hspi1, tx_buf, rx_buf, 2, 50);
+      HAL_GPIO_WritePin(GPIOB, CS_Pin, GPIO_PIN_SET);
+      return (rx_buf[0] << 16) | (rx_buf[3] << 8) | (rx_buf[2] << 0);
 }
 
 void Write_AD7768_Register(uint8_t address, uint8_t value){
