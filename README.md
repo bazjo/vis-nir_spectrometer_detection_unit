@@ -1,7 +1,7 @@
 # vis-nir_spectrometer_detection_unit
 This project contains a high-resolution detection unit for VIS/NIR spectroscopy using the Hamamatsu S1337-1010 photodiode and the Analog AD7768-1 24 Bit ADC.
 
-It was developed as a student project in the summer term of 2020 int the course "Optical Spectroscopy and its Applications" at Cologne University of Applied Sciences.
+It was developed as a student project in the summer term of 2020 in the course "Optical Spectroscopy and its Applications" at Cologne University of Applied Sciences.
 
 ## Getting Started
 
