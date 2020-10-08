@@ -5,7 +5,7 @@ It was developed as a student project in the summer term of 2020 int the course 
 
 ## Getting Started
 
-![](https://github.com/azjo/vis-nir_spectrometer_detection_unit/raw/master/resources/pcb.jpg)
+![](https://github.com/bazjo/vis-nir_spectrometer_detection_unit/raw/master/resources/images/pcb.jpg)
 
 The PCB is designed to utilize an Arduino shield footprint for use with various breakout boards, such as ST Nucleo STM32 development boards or the avnet MiniZed development platform for Xilinx Zynq.
 
@@ -19,7 +19,7 @@ Demo applications are provided for the Arduino platform (just for the Si514 as t
 
 ## Theory of Operation
 
-![](https://github.com/azjo/vis-nir_spectrometer_detection_unit/raw/master/resources/schematics.png)
+![](https://github.com/bazjo/vis-nir_spectrometer_detection_unit/raw/master/resources/images/schematics.png)
 
 ### Pinout
 [jumpered] Pins must be connected by a designated jumper resistor.
